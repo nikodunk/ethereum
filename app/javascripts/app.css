@@ -1,7 +1,6 @@
 body {
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 2%;
+  max-width: 800px;
+  margin: 0 auto;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -11,7 +10,6 @@ label {
 }
 
 input {
-  width: 500px;
   padding: 5px;
   font-size: 16px;
 }
@@ -22,7 +20,7 @@ button {
 }
 
 h1, h2 {
-  display: inline-block;
+  text-align: center;
   vertical-align: middle;
   margin-top: 0px;
   margin-bottom: 10px;

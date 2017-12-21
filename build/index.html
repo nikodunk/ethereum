@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hello World DApp</title>
+  <title>Sensorcoin</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'> -->
   <style>
-    .margin-top-3 {
-      margin-top: 3em;
+    table, th, td{
+      border-collapse: collapse;
+      border: 1px lightgrey solid;
+      padding: 10px;
+    }
+    a {
+      background-color: lightblue;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none
+    }
+    .flexbox{
+        margin: 0 auto; 
+        display:flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        text-align: center
+      }
+    .box{
+      border: 1px solid lightgrey;
+      padding: 10px;
+      margin: 10px;
     }
   </style>
 </head>
-<body class="container">
-  <h1>A Simple Hello World Voting Application</h1>
-  <div class="col-sm-7 margin-top-3">
-    <h2>Candidates</h2>
-    <div class="table-responsive">
-      <table class="table table-bordered">
+<body >
+  <h1>Buy and use sensorcoins</h1>
+  <div class="flexbox">
+    <div class="box">
+      <h2>Sensors</h2>
+      <table >
         <thead>
           <tr>
-            <th>Candidate</th>
-            <th>Votes</th>
+            <th>Sensor</th>
+            <th>Sensorcoins spent</th>
           </tr>
         </thead>
         <tbody id="candidate-rows">
         </tbody>
       </table>
     </div>
-    <div class="container-fluid">
-      <h2>Vote for Candidate</h2>
+
+    <div class="box">
+      <h2>Buy Sensordata</h2>
       <div id="msg"></div>
-      <input type="text" id="candidate" placeholder="Enter the candidate name"/>
+      <input type="text" id="candidate" placeholder="Enter sensor name"/>
       <br>
       <br>
-      <input type="text" id="vote-tokens" placeholder="Total no. of tokens to vote"/>
+      <input type="text" id="vote-tokens" placeholder="Enter sensorcoins to spend"/>
       <br>
       <br>
-      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Spend</a>
     </div>
-  </div>
-  <div class="col-sm-offset-1 col-sm-4 margin-top-3">
-    <div class="row">
-      <h2>Token Stats</h2>
+
+    <div class="box">
+      <h2>Sensorcoin Stats</h2>
       <div class="table-responsive">
         <table class="table table-bordered">
           <tr>
-            <td>Tokens For Sale</td>
+            <td>Sensorcoins For Sale</td>
             <td id="tokens-total"></td>
           </tr>
           <tr>
-            <td>Tokens Sold</td>
+            <td>Sensorcoins Sold</td>
             <td id="tokens-sold"></td>
           </tr>
           <tr>
-            <td>Price Per Token</td>
+            <td>Price Per Sensorcoin</td>
             <td id="token-cost"></td>
           </tr>
           <tr>
@@ -62,17 +82,19 @@
         </table>
       </div>
     </div>
-    <div class="row margin-top-3">
-      <h2>Purchase Tokens</h2>
-      <div class="col-sm-12">
+
+    <div class="box">
+      <h2>Buy more sensorcoins</h2>
+      <div >
         <div id="buy-msg"></div>
-        <input type="text" id="buy" class="col-sm-8" placeholder="Number of tokens to buy"/>&nbsp;
+        <input type="text" id="buy"  placeholder="Number of tokens to buy"/>&nbsp;
         <a href="#" onclick="buyTokens()" class="btn btn-primary">Buy</a>
       </div>
     </div>
-    <div class="row margin-top-3">
-      <h2>Lookup Voter Info</h2>
-      <div class="col-sm-12">
+
+    <!-- <div class="box">
+      <h2>Lookup User Info</h2>
+      <div>
         <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the voter address" />&nbsp;
         <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Lookup</a>
         <div class="voter-details row text-left">
@@ -80,7 +102,8 @@
           <div id="votes-cast" class="col-md-12"></div>
         </div>
       </div>
-    </div>
+    </div> -->
+
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
