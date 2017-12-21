@@ -25428,7 +25428,7 @@ exports = module.exports = __webpack_require__(81)();
 
 
 // module
-exports.push([module.i, "body {\n  margin-left: 25%;\n  margin-right: 25%;\n  margin-top: 2%;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\ninput {\n  width: 500px;\n  padding: 5px;\n  font-size: 16px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  display: inline-block;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n", ""]);
+exports.push([module.i, "body {\n  max-width: 800px;\n  margin: 0 auto;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\ninput {\n  padding: 5px;\n  font-size: 16px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  text-align: center;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n", ""]);
 
 // exports
 
