@@ -14,7 +14,7 @@
       background-color: lightblue;
       padding: 10px;
       border-radius: 5px;
-      text-decoration: none
+      text-decoration: none;
     }
     .flexbox{
         margin: 0 auto; 
@@ -31,35 +31,33 @@
   </style>
 </head>
 <body >
-  <h1>Buy sensor data</h1>
+  <h1>Buy sensor data with sensorcoin</h1>
   <div class="flexbox">
 
     <div class="box">
-      <h2>Step 1: Exchange sensorcoins</h2>
-      <div >
+      <h4>Step 1: Exchange sensorcoins</h4>
+      <div>
+        <span>
+          Price Per Sensorcoin: 
+          <span id="token-cost"></span>
+        </span><br><br>
+        <input type="text" id="buy"  placeholder="Number of sensorcoins to buy"/><br><br>
+        <a href="#" onclick="buyTokens()" class="btn btn-primary">Exchange Now</a><br><br>
         <div id="buy-msg"></div>
-        <input type="text" id="buy"  placeholder="Number of tokens to buy"/>&nbsp;
-        <a href="#" onclick="buyTokens()" class="btn btn-primary">Exchange Now</a>
       </div>
     </div>
 
 
     <div class="box">
-      <h2>Step 2: Purchase data</h2>
-      <div id="msg"></div>
-      <input type="text" id="candidate" placeholder="Enter sensor name"/>
-      <br>
-      <br>
-      <input type="text" id="vote-tokens" placeholder="Enter sensorcoins to spend"/>
-      <br>
-      <br>
-      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Buy now</a>
-
-      <br><br>
-      <hr>
-      <br><br>
+      <h4>Step 2: Purchase data with sensorcoins</h4>
       
-      <h2>Available sensors</h2>
+      <input type="text" id="candidate" placeholder="Enter sensor name"/><br><br>
+      <input type="text" id="vote-tokens" placeholder="Enter sensorcoins to spend"/><br><br>
+      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Buy now</a><br><br>
+      <div id="msg"></div><br><br>
+      <hr><br><br>
+      
+      <h4>Available sensors</h4>
       <table >
         <thead>
           <tr>
@@ -74,9 +72,8 @@
     </div>
 
     <div class="box">
-      <h2>Sensorcoin Stats</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered">
+      <h4>Sensorcoin Stats</h4>
+        <table >
           <tr>
             <td>Sensorcoins For Sale</td>
             <td id="tokens-total"></td>
@@ -86,15 +83,10 @@
             <td id="tokens-sold"></td>
           </tr>
           <tr>
-            <td>Price Per Sensorcoin</td>
-            <td id="token-cost"></td>
-          </tr>
-          <tr>
             <td>Balance in the contract</td>
             <td id="contract-balance"></td>
           </tr>
         </table>
-      </div>
     </div>
 
     
