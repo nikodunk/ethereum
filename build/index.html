@@ -31,24 +31,21 @@
   </style>
 </head>
 <body >
-  <h1>Buy and use sensorcoins</h1>
+  <h1>Buy sensor data</h1>
   <div class="flexbox">
-    <div class="box">
-      <h2>Sensors</h2>
-      <table >
-        <thead>
-          <tr>
-            <th>Sensor</th>
-            <th>Sensorcoins spent</th>
-          </tr>
-        </thead>
-        <tbody id="candidate-rows">
-        </tbody>
-      </table>
-    </div>
 
     <div class="box">
-      <h2>Purchase data</h2>
+      <h2>Step 1: Exchange sensorcoins</h2>
+      <div >
+        <div id="buy-msg"></div>
+        <input type="text" id="buy"  placeholder="Number of tokens to buy"/>&nbsp;
+        <a href="#" onclick="buyTokens()" class="btn btn-primary">Exchange Now</a>
+      </div>
+    </div>
+
+
+    <div class="box">
+      <h2>Step 2: Purchase data</h2>
       <div id="msg"></div>
       <input type="text" id="candidate" placeholder="Enter sensor name"/>
       <br>
@@ -57,6 +54,23 @@
       <br>
       <br>
       <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Buy now</a>
+
+      <br><br>
+      <hr>
+      <br><br>
+      
+      <h2>Available sensors</h2>
+      <table >
+        <thead>
+          <tr>
+            <th>Sensor</th>
+            <th>data bought</th>
+          </tr>
+        </thead>
+        <tbody id="candidate-rows">
+        </tbody>
+      </table>
+    
     </div>
 
     <div class="box">
@@ -83,14 +97,7 @@
       </div>
     </div>
 
-    <div class="box">
-      <h2>Get sensorcoins</h2>
-      <div >
-        <div id="buy-msg"></div>
-        <input type="text" id="buy"  placeholder="Number of tokens to buy"/>&nbsp;
-        <a href="#" onclick="buyTokens()" class="btn btn-primary">Exchange Now</a>
-      </div>
-    </div>
+    
 
     <!-- <div class="box">
       <h2>Lookup User Info</h2>
