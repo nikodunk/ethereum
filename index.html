@@ -10,11 +10,31 @@
       border: 1px lightgrey solid;
       padding: 10px;
     }
-    a {
+    .btn {
       background-color: lightblue;
       padding: 10px;
       border-radius: 5px;
       text-decoration: none;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .btn:hover{
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.5);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.5);   
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.5);
+        transition: all 200ms ease-in;
+        transform: scale(1.03);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: box-shadow 0.2s ease-in-out;
+
+    }
+    a{
+      color: white;
+      text-decoration: none
     }
     .flexbox{
         margin: 0 auto; 
@@ -27,23 +47,9 @@
       border: 1px solid lightgrey;
       padding: 10px;
       margin: 10px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
       border-radius: 5px;
     }
-    .box:hover{
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      transition: box-shadow 0.2s ease-in-out;
-    }
-    /*.btn:hover{
-        -webkit-transition: all 200ms ease-in;
-        -webkit-transform: scale(1.5);
-        -ms-transition: all 200ms ease-in;
-        -ms-transform: scale(1.5);   
-        -moz-transition: all 200ms ease-in;
-        -moz-transform: scale(1.5);
-        transition: all 200ms ease-in;
-        transform: scale(1.03);
-    }*/
 
   </style>
 </head>
@@ -59,7 +65,7 @@
           <span id="token-cost"></span>
         </span><br><br>
         <input type="text" id="buy"  placeholder="Number of sensorcoins to buy"/><br><br>
-        <a href="#" onclick="buyTokens()" class="btn btn-primary">Exchange Now</a><br><br>
+        <div class="btn btn-primary"><a href="#" onclick="buyTokens()" >Exchange Now</a></div><br><br>
         <div id="buy-msg"></div>
       </div><br><br>
       <hr>
@@ -68,18 +74,18 @@
           Mine – Offer your sensor now for 2 sensorcoin/hour 
           <span id="token-cost"></span>
         </span><br><br>
-        <a href="">Offer Now</a><br><br>
+        <div class="btn btn-primary"><a href="">Mine Now</a></div><br><br>
         <div id="buy-msg"></div>
       </div>
     </div>
 
 
     <div class="box">
-      <h4>Step 2: Purchase data with sensorcoins</h4>
+      <h4>Step 2: Get data from any sensor with sensorcoins</h4>
       
       <input type="text" id="candidate" placeholder="Enter sensor name"/><br><br>
       <input type="text" id="vote-tokens" placeholder="Enter sensorcoins to spend"/><br><br>
-      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Buy now</a><br><br>
+      <div class="btn btn-primary"><a href="#" onclick="voteForCandidate()">Buy now</a></div><br><br>
       <div id="msg"></div><br><br>
       <hr>
       
