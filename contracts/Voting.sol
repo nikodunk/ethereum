@@ -9,6 +9,7 @@ contract Voting {
     uint[] tokensUsedPerCandidate; // Array to keep track of votes per candidate.
     /* We have an array of candidates initialized below.
      Every time this voter votes with her tokens, the value at that
+     
      index is incremented. Example, if candidateList array declared
      below has ["Rama", "Nick", "Jose"] and this
      voter votes 10 tokens to Nick, the tokensUsedPerCandidate[1]
