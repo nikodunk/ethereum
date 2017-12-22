@@ -50,31 +50,33 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
       border-radius: 5px;
     }
+    input{
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px lightgrey solid;
+    }
 
   </style>
 </head>
 <body >
-  <h1>Buy sensor data with sensorcoin</h1>
+  <h1>Sensor Data Marketplace</h1>
   <div class="flexbox">
 
     <div class="box">
-      <h4>Step 1: Exchange or mine sensorcoins</h4>
+      <h4>Step 1: Get sensorcoins</h4>
       <div>
-        <span>
-          Exchange – Price Per Sensorcoin: 
-          <span id="token-cost"></span>
-        </span><br><br>
         <input type="text" id="buy"  placeholder="Number of sensorcoins to buy"/><br><br>
-        <div class="btn btn-primary"><a href="#" onclick="buyTokens()" >Exchange Now</a></div><br><br>
+        <div class="btn btn-primary"><a href="#" onclick="buyTokens()" >Exchange @ <span id="token-cost"></span></a></div><br><br>
         <div id="buy-msg"></div>
       </div><br><br>
       <hr>
       <div>
         <span>
-          Mine – Offer your sensor now for 2 sensorcoin/hour 
-          <span id="token-cost"></span>
+          <b>Mine</b> – Offering your sensor <br>
+          
         </span><br><br>
-        <div class="btn btn-primary"><a href="">Mine Now</a></div><br><br>
+        <div class="btn btn-primary"><a href="">Mine @ 2.0 SC/h</a></div><br><br>
         <div id="buy-msg"></div>
       </div>
     </div>
@@ -84,8 +86,8 @@
       <h4>Step 2: Get data from any sensor with sensorcoins</h4>
       
       <input type="text" id="candidate" placeholder="Enter sensor name"/><br><br>
-      <input type="text" id="vote-tokens" placeholder="Enter sensorcoins to spend"/><br><br>
-      <div class="btn btn-primary"><a href="#" onclick="voteForCandidate()">Buy now</a></div><br><br>
+      <input type="text" id="vote-tokens" placeholder="Amount"/><br><br>
+      <div class="btn btn-primary"><a href="#" onclick="voteForCandidate()">Buy @ 2.0 SC/h</a></div><br><br>
       <div id="msg"></div><br><br>
       <hr>
       
