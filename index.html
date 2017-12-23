@@ -9,6 +9,7 @@
       border-collapse: collapse;
       border: 1px lightgrey solid;
       padding: 10px;
+      margin: 0 auto;
     }
     .btn {
       background-color: lightblue;
@@ -68,10 +69,10 @@
     <div class="box">
       <h4>Step 1: Get or mine sensorcoins</h4>
       <div>
-        <input type="text" id="buy"  placeholder="Number of sensorcoins to buy"/><br><br>
-        <div class="btn btn-primary"><a href="#" onclick="buyTokens()" >Exchange @ <span id="token-cost"></span></a></div><br>
+        <input type="text" id="buy"  placeholder="Amount"/><br><br>
+        <div class="btn btn-primary"><a href="#" onclick="buyTokens()" >Exchange Now @ <span id="token-cost"></span></a></div><br>
         <div id="buy-msg"></div> – or – <br><br>
-        <div class="btn btn-primary"><a href="">Mine @ 2.0 SC/h</a></div><br><br>
+        <div class="btn btn-primary"><a href="">Mine Now @ 2.0 SC/h</a></div><br><br>
         <div id="buy-msg"></div>
         <small>This captures data from your sensor and offers it to the community. When users access your data, you will be paid. Expires after 10 days.</small>
       </div>
@@ -81,19 +82,19 @@
     <div class="box">
       <h4>Step 2: Get data from any sensor with sensorcoins</h4>
       <p>Available sensors</p>
-      <table style="margin: 0 auto">
+      <table>
         <thead>
           <tr>
-            <th>Sensor</th>
-            <th>data bought</th>
+            <th>Sensor name</th>
+            <th>Units sold</th>
           </tr>
         </thead>
         <tbody id="candidate-rows">
         </tbody>
       </table><br>
-      <input type="text" id="candidate" placeholder="Enter sensor name"/><br><br>
-      <input type="text" id="vote-tokens" placeholder="Amount"/><br><br>
-      <div class="btn btn-primary"><a href="#" onclick="voteForCandidate()">Buy @ 2.0 SC/h</a></div><br><br>
+      <input type="text" id="candidate" placeholder="Sensor name"/><br><br>
+      <input type="text" id="vote-tokens" placeholder="Units"/><br><br>
+      <div class="btn btn-primary"><a href="#" onclick="voteForCandidate()">Buy Now @ 2.0 SC/h</a></div><br><br>
       <div id="msg"></div><br><br>
     
     </div>
@@ -118,7 +119,7 @@
         <h4>Lookup User Info</h4>
         <div >
           <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the user address" /><br><br>
-          <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Lookup</a><br><br>
+          <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Get info</a><br><br>
           <div class="voter-details row text-left">
             <div id="tokens-bought" ></div>
             <div id="votes-cast" ></div>
