@@ -22157,10 +22157,10 @@ window.lookupVoterInfo = function() {
   let address = $("#voter-info").val();
   Voting.deployed().then(function(contractInstance) {
     contractInstance.voterDetails.call(address).then(function(v) {
-      $("#tokens-bought").html("Total Tokens bought: " + v[0].toString());
+      $("#tokens-bought").html("Total sensorcoins bought: " + v[0].toString());
       let votesPerCandidate = v[1];
       $("#votes-cast").empty();
-      $("#votes-cast").append("Votes cast per candidate: <br>");
+      $("#votes-cast").append("Spending per sensor: <br>");
       let allCandidates = Object.keys(candidates);
       for(let i=0; i < allCandidates.length; i++) {
         $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "<br>");
@@ -25428,7 +25428,7 @@ exports = module.exports = __webpack_require__(81)();
 
 
 // module
-exports.push([module.i, "body {\n  padding-top: 30px;\n  max-width: 800px;\n  margin: 0 auto;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\ninput {\n  padding: 5px;\n  font-size: 16px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  text-align: center;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n", ""]);
+exports.push([module.i, "body {\n  padding-top: 50px;\n  max-width: 1000px;\n  margin: 0 auto;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  text-align: center;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n", ""]);
 
 // exports
 

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 55);
+/******/ 	return __webpack_require__(__webpack_require__.s = 56);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -13044,9 +13044,9 @@ module.exports = g;
 
 
 
-var base64 = __webpack_require__(56)
-var ieee754 = __webpack_require__(83)
-var isArray = __webpack_require__(85)
+var base64 = __webpack_require__(57)
+var ieee754 = __webpack_require__(84)
+var isArray = __webpack_require__(86)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -15485,15 +15485,15 @@ function isnan (val) {
 
 var f = __webpack_require__(4);
 
-var SolidityTypeAddress = __webpack_require__(101);
-var SolidityTypeBool = __webpack_require__(102);
-var SolidityTypeInt = __webpack_require__(105);
-var SolidityTypeUInt = __webpack_require__(108);
-var SolidityTypeDynamicBytes = __webpack_require__(104);
-var SolidityTypeString = __webpack_require__(107);
-var SolidityTypeReal = __webpack_require__(106);
-var SolidityTypeUReal = __webpack_require__(109);
-var SolidityTypeBytes = __webpack_require__(103);
+var SolidityTypeAddress = __webpack_require__(102);
+var SolidityTypeBool = __webpack_require__(103);
+var SolidityTypeInt = __webpack_require__(106);
+var SolidityTypeUInt = __webpack_require__(109);
+var SolidityTypeDynamicBytes = __webpack_require__(105);
+var SolidityTypeString = __webpack_require__(108);
+var SolidityTypeReal = __webpack_require__(107);
+var SolidityTypeUReal = __webpack_require__(110);
+var SolidityTypeBytes = __webpack_require__(104);
 
 /**
  * SolidityCoder prototype should be used to encode/decode solidity params of any type
@@ -15751,15 +15751,15 @@ module.exports = coder;
 
 var f = __webpack_require__(5);
 
-var SolidityTypeAddress = __webpack_require__(133);
-var SolidityTypeBool = __webpack_require__(134);
-var SolidityTypeInt = __webpack_require__(137);
-var SolidityTypeUInt = __webpack_require__(140);
-var SolidityTypeDynamicBytes = __webpack_require__(136);
-var SolidityTypeString = __webpack_require__(139);
-var SolidityTypeReal = __webpack_require__(138);
-var SolidityTypeUReal = __webpack_require__(141);
-var SolidityTypeBytes = __webpack_require__(135);
+var SolidityTypeAddress = __webpack_require__(134);
+var SolidityTypeBool = __webpack_require__(135);
+var SolidityTypeInt = __webpack_require__(138);
+var SolidityTypeUInt = __webpack_require__(141);
+var SolidityTypeDynamicBytes = __webpack_require__(137);
+var SolidityTypeString = __webpack_require__(140);
+var SolidityTypeReal = __webpack_require__(139);
+var SolidityTypeUReal = __webpack_require__(142);
+var SolidityTypeBytes = __webpack_require__(136);
 
 var isDynamic = function (solidityType, type) {
    return solidityType.isDynamicType(type) ||
@@ -16024,7 +16024,7 @@ module.exports = function(module) {
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Web3 = __webpack_require__(144);
+var Web3 = __webpack_require__(145);
 
 // dont override global variable
 if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
@@ -19475,7 +19475,7 @@ module.exports = Web3;
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(60), __webpack_require__(58), __webpack_require__(11), __webpack_require__(13), __webpack_require__(35), __webpack_require__(43), __webpack_require__(76), __webpack_require__(44), __webpack_require__(77), __webpack_require__(36), __webpack_require__(75), __webpack_require__(34), __webpack_require__(71), __webpack_require__(12), __webpack_require__(1), __webpack_require__(61), __webpack_require__(63), __webpack_require__(62), __webpack_require__(65), __webpack_require__(64), __webpack_require__(66), __webpack_require__(67), __webpack_require__(68), __webpack_require__(70), __webpack_require__(69), __webpack_require__(59), __webpack_require__(57), __webpack_require__(78), __webpack_require__(74), __webpack_require__(73), __webpack_require__(72));
+		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(61), __webpack_require__(59), __webpack_require__(11), __webpack_require__(13), __webpack_require__(35), __webpack_require__(43), __webpack_require__(77), __webpack_require__(44), __webpack_require__(78), __webpack_require__(36), __webpack_require__(76), __webpack_require__(34), __webpack_require__(72), __webpack_require__(12), __webpack_require__(1), __webpack_require__(62), __webpack_require__(64), __webpack_require__(63), __webpack_require__(66), __webpack_require__(65), __webpack_require__(67), __webpack_require__(68), __webpack_require__(69), __webpack_require__(71), __webpack_require__(70), __webpack_require__(60), __webpack_require__(58), __webpack_require__(79), __webpack_require__(75), __webpack_require__(74), __webpack_require__(73));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -21972,15 +21972,21 @@ module.exports = Jsonrpc;
 
 /***/ }),
 /* 53 */
+/***/ (function(module, exports) {
+
+module.exports = {"contractName":"Voting","abi":[{"constant":true,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"totalVotesFor","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"tokensSold","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"user","type":"address"}],"name":"voterDetails","outputs":[{"name":"","type":"uint256"},{"name":"","type":"uint256[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"},{"name":"votesInTokens","type":"uint256"}],"name":"voteForCandidate","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"votesReceived","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalTokens","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"tokenPrice","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"allCandidates","outputs":[{"name":"","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"account","type":"address"}],"name":"transferTo","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"buy","outputs":[{"name":"","type":"uint256"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"candidateList","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"voterInfo","outputs":[{"name":"voterAddress","type":"address"},{"name":"tokensBought","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"balanceTokens","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"indexOfCandidate","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"tokens","type":"uint256"},{"name":"pricePerToken","type":"uint256"},{"name":"candidateNames","type":"bytes32[]"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}],"bytecode":"0x6060604052341561000f57600080fd5b604051610cdd380380610cdd833981016040528080519060200190919080519060200190919080518201919050508060029080519060200190610053929190610071565b508260038190555082600481905550816005819055505050506100e9565b8280548282559060005260206000209081019282156100b3579160200282015b828111156100b2578251829060001916905591602001919060010190610091565b5b5090506100c091906100c4565b5090565b6100e691905b808211156100e25760008160009055506001016100ca565b5090565b90565b610be5806100f86000396000f3006060604052600436106100d0576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f265cf7146100d5578063518ab2a8146101105780635938750d146101395780636b2dc6b5146101ce5780637021939f146101fe5780637e1c0c09146102395780637ff9b5961461026257806381c407151461028b578063a03fa7e3146102f5578063a6f2ae3a1461032e578063b13c744b1461034c578063cdf58d351461038b578063e4494a0f1461040b578063ecd098b014610434575b600080fd5b34156100e057600080fd5b6100fa60048080356000191690602001909190505061046f565b6040518082815260200191505060405180910390f35b341561011b57600080fd5b610123610494565b6040518082815260200191505060405180910390f35b341561014457600080fd5b610170600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104a2565b6040518083815260200180602001828103825283818151815260200191508051906020019060200280838360005b838110156101b957808201518184015260208101905061019e565b50505050905001935050505060405180910390f35b34156101d957600080fd5b6101fc60048080356000191690602001909190803590602001909190505061058a565b005b341561020957600080fd5b610223600480803560001916906020019091905050610821565b6040518082815260200191505060405180910390f35b341561024457600080fd5b61024c610839565b6040518082815260200191505060405180910390f35b341561026d57600080fd5b61027561083f565b6040518082815260200191505060405180910390f35b341561029657600080fd5b61029e610845565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156102e15780820151818401526020810190506102c6565b505050509050019250505060405180910390f35b341561030057600080fd5b61032c600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506108a7565b005b610336610901565b6040518082815260200191505060405180910390f35b341561035757600080fd5b61036d6004808035906020019091905050610a0b565b60405180826000191660001916815260200191505060405180910390f35b341561039657600080fd5b6103c2600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610a2f565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390f35b341561041657600080fd5b61041e610a73565b6040518082815260200191505060405180910390f35b341561043f57600080fd5b610459600480803560001916906020019091905050610a79565b6040518082815260200191505060405180910390f35b6000600160008360001916600019168152602001908152602001600020549050919050565b600060045460035403905090565b60006104ac610b40565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101546000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018080548060200260200160405190810160405280929190818152602001828054801561057a57602002820191906000526020600020905b815481526020019060010190808311610566575b5050505050905091509150915091565b600080600061059885610a79565b92507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff83141515156105c957600080fd5b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020180549050141561069e57600091505b60028054905082101561069d576000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201805480600101828161067b9190610b54565b916000526020600020900160008090919091505550818060010192505061061b565b5b6107366000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020180548060200260200160405190810160405280929190818152602001828054801561072c57602002820191906000526020600020905b815481526020019060010190808311610718575b5050505050610af7565b6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001015403905083811015151561078a57600080fd5b8360016000876000191660001916815260200190815260200160002060008282540192505081905550836000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018481548110151561080257fe5b9060005260206000209001600082825401925050819055505050505050565b60016020528060005260406000206000915090505481565b60035481565b60055481565b61084d610b80565b600280548060200260200160405190810160405280929190818152602001828054801561089d57602002820191906000526020600020905b81546000191681526020019060010190808311610885575b5050505050905090565b8073ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f1935050505015156108fe57600080fd5b50565b6000806005543481151561091157fe5b049050600454811115151561092557600080fd5b336000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160008282540192505081905550806004600082825403925050819055508091505090565b600281815481101515610a1a57fe5b90600052602060002090016000915090505481565b60006020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010154905082565b60045481565b600080600090505b600280549050811015610acd578260001916600282815481101515610aa257fe5b906000526020600020900154600019161415610ac057809150610af1565b8080600101915050610a81565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff91505b50919050565b6000806000809150600090505b8351811015610b36578381815181101515610b1b57fe5b90602001906020020151820191508080600101915050610b04565b8192505050919050565b602060405190810160405280600081525090565b815481835581811511610b7b57818360005260206000209182019101610b7a9190610b94565b5b505050565b602060405190810160405280600081525090565b610bb691905b80821115610bb2576000816000905550600101610b9a565b5090565b905600a165627a7a72305820b66cc6ce36d45ddc14a9001abc8a7fc110fa280942c7f8503e5cb4097e95892d0029","deployedBytecode":"0x6060604052600436106100d0576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f265cf7146100d5578063518ab2a8146101105780635938750d146101395780636b2dc6b5146101ce5780637021939f146101fe5780637e1c0c09146102395780637ff9b5961461026257806381c407151461028b578063a03fa7e3146102f5578063a6f2ae3a1461032e578063b13c744b1461034c578063cdf58d351461038b578063e4494a0f1461040b578063ecd098b014610434575b600080fd5b34156100e057600080fd5b6100fa60048080356000191690602001909190505061046f565b6040518082815260200191505060405180910390f35b341561011b57600080fd5b610123610494565b6040518082815260200191505060405180910390f35b341561014457600080fd5b610170600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104a2565b6040518083815260200180602001828103825283818151815260200191508051906020019060200280838360005b838110156101b957808201518184015260208101905061019e565b50505050905001935050505060405180910390f35b34156101d957600080fd5b6101fc60048080356000191690602001909190803590602001909190505061058a565b005b341561020957600080fd5b610223600480803560001916906020019091905050610821565b6040518082815260200191505060405180910390f35b341561024457600080fd5b61024c610839565b6040518082815260200191505060405180910390f35b341561026d57600080fd5b61027561083f565b6040518082815260200191505060405180910390f35b341561029657600080fd5b61029e610845565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156102e15780820151818401526020810190506102c6565b505050509050019250505060405180910390f35b341561030057600080fd5b61032c600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506108a7565b005b610336610901565b6040518082815260200191505060405180910390f35b341561035757600080fd5b61036d6004808035906020019091905050610a0b565b60405180826000191660001916815260200191505060405180910390f35b341561039657600080fd5b6103c2600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610a2f565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390f35b341561041657600080fd5b61041e610a73565b6040518082815260200191505060405180910390f35b341561043f57600080fd5b610459600480803560001916906020019091905050610a79565b6040518082815260200191505060405180910390f35b6000600160008360001916600019168152602001908152602001600020549050919050565b600060045460035403905090565b60006104ac610b40565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101546000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018080548060200260200160405190810160405280929190818152602001828054801561057a57602002820191906000526020600020905b815481526020019060010190808311610566575b5050505050905091509150915091565b600080600061059885610a79565b92507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff83141515156105c957600080fd5b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020180549050141561069e57600091505b60028054905082101561069d576000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201805480600101828161067b9190610b54565b916000526020600020900160008090919091505550818060010192505061061b565b5b6107366000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020180548060200260200160405190810160405280929190818152602001828054801561072c57602002820191906000526020600020905b815481526020019060010190808311610718575b5050505050610af7565b6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001015403905083811015151561078a57600080fd5b8360016000876000191660001916815260200190815260200160002060008282540192505081905550836000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018481548110151561080257fe5b9060005260206000209001600082825401925050819055505050505050565b60016020528060005260406000206000915090505481565b60035481565b60055481565b61084d610b80565b600280548060200260200160405190810160405280929190818152602001828054801561089d57602002820191906000526020600020905b81546000191681526020019060010190808311610885575b5050505050905090565b8073ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f1935050505015156108fe57600080fd5b50565b6000806005543481151561091157fe5b049050600454811115151561092557600080fd5b336000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160008282540192505081905550806004600082825403925050819055508091505090565b600281815481101515610a1a57fe5b90600052602060002090016000915090505481565b60006020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010154905082565b60045481565b600080600090505b600280549050811015610acd578260001916600282815481101515610aa257fe5b906000526020600020900154600019161415610ac057809150610af1565b8080600101915050610a81565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff91505b50919050565b6000806000809150600090505b8351811015610b36578381815181101515610b1b57fe5b90602001906020020151820191508080600101915050610b04565b8192505050919050565b602060405190810160405280600081525090565b815481835581811511610b7b57818360005260206000209182019101610b7a9190610b94565b5b505050565b602060405190810160405280600081525090565b610bb691905b80821115610bb2576000816000905550600101610b9a565b5090565b905600a165627a7a72305820b66cc6ce36d45ddc14a9001abc8a7fc110fa280942c7f8503e5cb4097e95892d0029","sourceMap":"95:4851:1:-;;;1597:209;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1701:14;1685:13;:30;;;;;;;;;;;;:::i;:::-;;1735:6;1721:11;:20;;;;1763:6;1747:13;:22;;;;1788:13;1775:10;:26;;;;1597:209;;;95:4851;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;","deployedSourceMap":"95:4851:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1810:111;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4101:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4199:159;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;2078:877:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1149:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1235:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1394:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4855:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;4766:85:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;3791:306;;;;;;;;;;;;;;;;;;;;;;;1200:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;957:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1313:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3291:226;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1810:111;1873:4;1892:13;:24;1906:9;1892:24;;;;;;;;;;;;;;;;;;1885:31;;1810:111;;;:::o;4101:94::-;4144:4;4177:13;;4163:11;;:27;4156:34;;4101:94;:::o;4199:159::-;4256:4;4262:6;;:::i;:::-;4284:9;:15;4294:4;4284:15;;;;;;;;;;;;;;;:28;;;4314:9;:15;4324:4;4314:15;;;;;;;;;;;;;;;:38;;4276:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4199:159;;;:::o;2078:877::-;2156:10;2412:6;2601:20;2169:27;2186:9;2169:16;:27::i;:::-;2156:40;;2224:2;2210:5;:17;;2202:26;;;;;;;;2397:1;2342:9;:21;2352:10;2342:21;;;;;;;;;;;;;;;:44;;:51;;;;:56;2338:194;;;2421:1;2412:10;;2408:118;2428:13;:20;;;;2424:1;:24;2408:118;;;2465:9;:21;2475:10;2465:21;;;;;;;;;;;;;;;:44;;:52;;;;;;;;;;;:::i;:::-;;;;;;;;;;2515:1;2465:52;;;;;;;2450:3;;;;;;;2408:118;;;2338:194;2661:61;2677:9;:21;2687:10;2677:21;;;;;;;;;;;;;;;:44;;2661:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:15;:61::i;:::-;2624:9;:21;2634:10;2624:21;;;;;;;;;;;;;;;:34;;;:98;2601:121;;2755:13;2736:15;:32;;2728:41;;;;;;;;2804:13;2776;:24;2790:9;2776:24;;;;;;;;;;;;;;;;;;:41;;;;;;;;;;;2937:13;2882:9;:21;2892:10;2882:21;;;;;;;;;;;;;;;:44;;2927:5;2882:51;;;;;;;;;;;;;;;;;;;:68;;;;;;;;;;;2078:877;;;;;:::o;1149:46::-;;;;;;;;;;;;;;;;;:::o;1235:23::-;;;;:::o;1394:22::-;;;;:::o;4855:88::-;4901:9;;:::i;:::-;4925:13;4918:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4855:88;:::o;4766:85::-;4816:7;:16;;:30;4833:4;:12;;;4816:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4766:85;:::o;3791:306::-;3830:4;3842:16;3873:10;;3861:9;:22;;;;;;;;3842:41;;3912:13;;3897:11;:28;;3889:37;;;;;;;;3969:10;3932:9;:21;3942:10;3932:21;;;;;;;;;;;;;;;:34;;;:47;;;;;;;;;;;;;;;;;;4023:11;3985:9;:21;3995:10;3985:21;;;;;;;;;;;;;;;:34;;;:49;;;;;;;;;;;4057:11;4040:13;;:28;;;;;;;;;;;4081:11;4074:18;;3791:306;;:::o;1200:30::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;957:43::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1313:25::-;;;;:::o;3291:226::-;3357:4;3373:6;3382:1;3373:10;;3369:123;3389:13;:20;;;;3385:1;:24;3369:123;;;3448:9;3428:29;;;:13;3442:1;3428:16;;;;;;;;;;;;;;;;;;;:29;;;;3424:62;;;3476:1;3469:8;;;;3424:62;3411:3;;;;;;;3369:123;;;3509:2;3497:15;;3291:226;;;;;:::o;3017:270::-;3096:4;3108:20;3142:6;3131:1;3108:24;;3151:1;3142:10;;3138:117;3158:23;:30;3154:1;:34;3138:117;;;3222:23;3246:1;3222:26;;;;;;;;;;;;;;;;;;3203:45;;;;3190:3;;;;;;;3138:117;;;3267:15;3260:22;;3017:270;;;;;:::o;95:4851::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o","source":"pragma solidity ^0.4.18; //We have to specify what version of the compiler this code will use\n\ncontract Voting {\n\n  // We use the struct datatype to store the voter information.\n  struct voter {\n    address voterAddress; // The address of the voter\n    uint tokensBought;    // The total no. of tokens this voter owns\n    uint[] tokensUsedPerCandidate; // Array to keep track of votes per candidate.\n    /* We have an array of candidates initialized below.\n     Every time this voter votes with her tokens, the value at that\n     index is incremented. Example, if candidateList array declared\n     below has [\"Rama\", \"Nick\", \"Jose\"] and this\n     voter votes 10 tokens to Nick, the tokensUsedPerCandidate[1]\n     will be incremented by 10.\n     */\n  }\n\n  /* mapping is equivalent to an associate array or hash\n   The key of the mapping is candidate name stored as type bytes32 and value is\n   an unsigned integer which used to store the vote count\n   */\n\n  mapping (address => voter) public voterInfo;\n\n  /* Solidity doesn't let you return an array of strings yet. We will use an array of bytes32\n   instead to store the list of candidates\n   */\n\n  mapping (bytes32 => uint) public votesReceived;\n\n  bytes32[] public candidateList;\n\n  uint public totalTokens; // Total no. of tokens available for this election\n  uint public balanceTokens; // Total no. of tokens still available for purchase\n  uint public tokenPrice; // Price per token\n\n  /* When the contract is deployed on the blockchain, we will initialize\n   the total number of tokens for sale, cost per token and all the candidates\n   */\n  function Voting(uint tokens, uint pricePerToken, bytes32[] candidateNames) public {\n    candidateList = candidateNames;\n    totalTokens = tokens;\n    balanceTokens = tokens;\n    tokenPrice = pricePerToken;\n  }\n\n  function totalVotesFor(bytes32 candidate) view public returns (uint) {\n    return votesReceived[candidate];\n  }\n\n  /* Instead of just taking the candidate name as an argument, we now also\n   require the no. of tokens this voter wants to vote for the candidate\n   */\n  function voteForCandidate(bytes32 candidate, uint votesInTokens) public {\n    uint index = indexOfCandidate(candidate);\n    require(index != uint(-1));\n\n    // msg.sender gives us the address of the account/voter who is trying\n    // to call this function\n    if (voterInfo[msg.sender].tokensUsedPerCandidate.length == 0) {\n      for(uint i = 0; i < candidateList.length; i++) {\n        voterInfo[msg.sender].tokensUsedPerCandidate.push(0);\n      }\n    }\n\n    // Make sure this voter has enough tokens to cast the vote\n    uint availableTokens = voterInfo[msg.sender].tokensBought - totalTokensUsed(voterInfo[msg.sender].tokensUsedPerCandidate);\n    require(availableTokens >= votesInTokens);\n\n    votesReceived[candidate] += votesInTokens;\n\n    // Store how many tokens were used for this candidate\n    voterInfo[msg.sender].tokensUsedPerCandidate[index] += votesInTokens;\n  }\n\n  // Return the sum of all the tokens used by this voter.\n  function totalTokensUsed(uint[] _tokensUsedPerCandidate) private pure returns (uint) {\n    uint totalUsedTokens = 0;\n    for(uint i = 0; i < _tokensUsedPerCandidate.length; i++) {\n      totalUsedTokens += _tokensUsedPerCandidate[i];\n    }\n    return totalUsedTokens;\n  }\n\n  function indexOfCandidate(bytes32 candidate) view public returns (uint) {\n    for(uint i = 0; i < candidateList.length; i++) {\n      if (candidateList[i] == candidate) {\n        return i;\n      }\n    }\n    return uint(-1);\n  }\n\n  /* This function is used to purchase the tokens. Note the keyword 'payable'\n   below. By just adding that one keyword to a function, your contract can\n   now accept Ether from anyone who calls this function. Accepting money can\n   not get any easier than this!\n   */\n\n  function buy() payable public returns (uint) {\n    uint tokensToBuy = msg.value / tokenPrice;\n    require(tokensToBuy <= balanceTokens);\n    voterInfo[msg.sender].voterAddress = msg.sender;\n    voterInfo[msg.sender].tokensBought += tokensToBuy;\n    balanceTokens -= tokensToBuy;\n    return tokensToBuy;\n  }\n\n  function tokensSold() view public returns (uint) {\n    return totalTokens - balanceTokens;\n  }\n\n  function voterDetails(address user) view public returns (uint, uint[]) {\n    return (voterInfo[user].tokensBought, voterInfo[user].tokensUsedPerCandidate);\n  }\n\n  /* All the ether sent by voters who purchased the tokens is in this\n   contract's account. This method will be used to transfer out all those ethers\n   in to another account. *** The way this function is written currently, anyone can call\n   this method and transfer the balance in to their account. In reality, you should add\n   check to make sure only the owner of this contract can cash out.\n   */\n\n  function transferTo(address account) public {\n    account.transfer(this.balance);\n  }\n\n  function allCandidates() view public returns (bytes32[]) {\n    return candidateList;\n  }\n\n}\n","sourcePath":"/Users/nikolai/Desktop/stuff/Produce/project_hackathons/Hackathon16 Blockchain/part3/contracts/Voting.sol","ast":{"attributes":{"absolutePath":"/Users/nikolai/Desktop/stuff/Produce/project_hackathons/Hackathon16 Blockchain/part3/contracts/Voting.sol","exportedSymbols":{"Voting":[380]}},"children":[{"attributes":{"literals":["solidity","^","0.4",".18"]},"id":58,"name":"PragmaDirective","src":"0:24:1"},{"attributes":{"baseContracts":[null],"contractDependencies":[null],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[380],"name":"Voting","scope":381},"children":[{"attributes":{"canonicalName":"Voting.voter","name":"voter","scope":380,"visibility":"public"},"children":[{"attributes":{"constant":false,"name":"voterAddress","scope":66,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":59,"name":"ElementaryTypeName","src":"199:7:1"}],"id":60,"name":"VariableDeclaration","src":"199:20:1"},{"attributes":{"constant":false,"name":"tokensBought","scope":66,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":61,"name":"ElementaryTypeName","src":"253:4:1"}],"id":62,"name":"VariableDeclaration","src":"253:17:1"},{"attributes":{"constant":false,"name":"tokensUsedPerCandidate","scope":66,"stateVariable":false,"storageLocation":"default","type":"uint256[] storage pointer","value":null,"visibility":"internal"},"children":[{"attributes":{"length":null,"type":"uint256[] storage pointer"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":63,"name":"ElementaryTypeName","src":"322:4:1"}],"id":64,"name":"ArrayTypeName","src":"322:6:1"}],"id":65,"name":"VariableDeclaration","src":"322:29:1"}],"id":66,"name":"StructDefinition","src":"180:571:1"},{"attributes":{"constant":false,"name":"voterInfo","scope":380,"stateVariable":true,"storageLocation":"default","type":"mapping(address => struct Voting.voter storage ref)","value":null,"visibility":"public"},"children":[{"attributes":{"type":"mapping(address => struct Voting.voter storage ref)"},"children":[{"attributes":{"name":"address","type":"address"},"id":67,"name":"ElementaryTypeName","src":"966:7:1"},{"attributes":{"contractScope":null,"name":"voter","referencedDeclaration":66,"type":"struct Voting.voter storage pointer"},"id":68,"name":"UserDefinedTypeName","src":"977:5:1"}],"id":69,"name":"Mapping","src":"957:26:1"}],"id":70,"name":"VariableDeclaration","src":"957:43:1"},{"attributes":{"constant":false,"name":"votesReceived","scope":380,"stateVariable":true,"storageLocation":"default","type":"mapping(bytes32 => uint256)","value":null,"visibility":"public"},"children":[{"attributes":{"type":"mapping(bytes32 => uint256)"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":71,"name":"ElementaryTypeName","src":"1158:7:1"},{"attributes":{"name":"uint","type":"uint256"},"id":72,"name":"ElementaryTypeName","src":"1169:4:1"}],"id":73,"name":"Mapping","src":"1149:25:1"}],"id":74,"name":"VariableDeclaration","src":"1149:46:1"},{"attributes":{"constant":false,"name":"candidateList","scope":380,"stateVariable":true,"storageLocation":"default","type":"bytes32[] storage ref","value":null,"visibility":"public"},"children":[{"attributes":{"length":null,"type":"bytes32[] storage pointer"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":75,"name":"ElementaryTypeName","src":"1200:7:1"}],"id":76,"name":"ArrayTypeName","src":"1200:9:1"}],"id":77,"name":"VariableDeclaration","src":"1200:30:1"},{"attributes":{"constant":false,"name":"totalTokens","scope":380,"stateVariable":true,"storageLocation":"default","type":"uint256","value":null,"visibility":"public"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":78,"name":"ElementaryTypeName","src":"1235:4:1"}],"id":79,"name":"VariableDeclaration","src":"1235:23:1"},{"attributes":{"constant":false,"name":"balanceTokens","scope":380,"stateVariable":true,"storageLocation":"default","type":"uint256","value":null,"visibility":"public"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":80,"name":"ElementaryTypeName","src":"1313:4:1"}],"id":81,"name":"VariableDeclaration","src":"1313:25:1"},{"attributes":{"constant":false,"name":"tokenPrice","scope":380,"stateVariable":true,"storageLocation":"default","type":"uint256","value":null,"visibility":"public"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":82,"name":"ElementaryTypeName","src":"1394:4:1"}],"id":83,"name":"VariableDeclaration","src":"1394:22:1"},{"attributes":{"constant":false,"implemented":true,"isConstructor":true,"modifiers":[null],"name":"Voting","payable":false,"scope":380,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"tokens","scope":110,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":84,"name":"ElementaryTypeName","src":"1613:4:1"}],"id":85,"name":"VariableDeclaration","src":"1613:11:1"},{"attributes":{"constant":false,"name":"pricePerToken","scope":110,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":86,"name":"ElementaryTypeName","src":"1626:4:1"}],"id":87,"name":"VariableDeclaration","src":"1626:18:1"},{"attributes":{"constant":false,"name":"candidateNames","scope":110,"stateVariable":false,"storageLocation":"default","type":"bytes32[] memory","value":null,"visibility":"internal"},"children":[{"attributes":{"length":null,"type":"bytes32[] storage pointer"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":88,"name":"ElementaryTypeName","src":"1646:7:1"}],"id":89,"name":"ArrayTypeName","src":"1646:9:1"}],"id":90,"name":"VariableDeclaration","src":"1646:24:1"}],"id":91,"name":"ParameterList","src":"1612:59:1"},{"attributes":{"parameters":[null]},"children":[],"id":92,"name":"ParameterList","src":"1679:0:1"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"bytes32[] storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":77,"type":"bytes32[] storage ref","value":"candidateList"},"id":93,"name":"Identifier","src":"1685:13:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":90,"type":"bytes32[] memory","value":"candidateNames"},"id":94,"name":"Identifier","src":"1701:14:1"}],"id":95,"name":"Assignment","src":"1685:30:1"}],"id":96,"name":"ExpressionStatement","src":"1685:30:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":79,"type":"uint256","value":"totalTokens"},"id":97,"name":"Identifier","src":"1721:11:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":85,"type":"uint256","value":"tokens"},"id":98,"name":"Identifier","src":"1735:6:1"}],"id":99,"name":"Assignment","src":"1721:20:1"}],"id":100,"name":"ExpressionStatement","src":"1721:20:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":81,"type":"uint256","value":"balanceTokens"},"id":101,"name":"Identifier","src":"1747:13:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":85,"type":"uint256","value":"tokens"},"id":102,"name":"Identifier","src":"1763:6:1"}],"id":103,"name":"Assignment","src":"1747:22:1"}],"id":104,"name":"ExpressionStatement","src":"1747:22:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":83,"type":"uint256","value":"tokenPrice"},"id":105,"name":"Identifier","src":"1775:10:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":87,"type":"uint256","value":"pricePerToken"},"id":106,"name":"Identifier","src":"1788:13:1"}],"id":107,"name":"Assignment","src":"1775:26:1"}],"id":108,"name":"ExpressionStatement","src":"1775:26:1"}],"id":109,"name":"Block","src":"1679:127:1"}],"id":110,"name":"FunctionDefinition","src":"1597:209:1"},{"attributes":{"constant":true,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"totalVotesFor","payable":false,"scope":380,"stateMutability":"view","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"candidate","scope":122,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":111,"name":"ElementaryTypeName","src":"1833:7:1"}],"id":112,"name":"VariableDeclaration","src":"1833:17:1"}],"id":113,"name":"ParameterList","src":"1832:19:1"},{"children":[{"attributes":{"constant":false,"name":"","scope":122,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":114,"name":"ElementaryTypeName","src":"1873:4:1"}],"id":115,"name":"VariableDeclaration","src":"1873:4:1"}],"id":116,"name":"ParameterList","src":"1872:6:1"},{"children":[{"attributes":{"functionReturnParameters":116},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":74,"type":"mapping(bytes32 => uint256)","value":"votesReceived"},"id":117,"name":"Identifier","src":"1892:13:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":112,"type":"bytes32","value":"candidate"},"id":118,"name":"Identifier","src":"1906:9:1"}],"id":119,"name":"IndexAccess","src":"1892:24:1"}],"id":120,"name":"Return","src":"1885:31:1"}],"id":121,"name":"Block","src":"1879:42:1"}],"id":122,"name":"FunctionDefinition","src":"1810:111:1"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"voteForCandidate","payable":false,"scope":380,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"candidate","scope":215,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":123,"name":"ElementaryTypeName","src":"2104:7:1"}],"id":124,"name":"VariableDeclaration","src":"2104:17:1"},{"attributes":{"constant":false,"name":"votesInTokens","scope":215,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":125,"name":"ElementaryTypeName","src":"2123:4:1"}],"id":126,"name":"VariableDeclaration","src":"2123:18:1"}],"id":127,"name":"ParameterList","src":"2103:39:1"},{"attributes":{"parameters":[null]},"children":[],"id":128,"name":"ParameterList","src":"2150:0:1"},{"children":[{"attributes":{"assignments":[130]},"children":[{"attributes":{"constant":false,"name":"index","scope":215,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":129,"name":"ElementaryTypeName","src":"2156:4:1"}],"id":130,"name":"VariableDeclaration","src":"2156:10:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bytes32","typeString":"bytes32"}],"overloadedDeclarations":[null],"referencedDeclaration":284,"type":"function (bytes32) view returns (uint256)","value":"indexOfCandidate"},"id":131,"name":"Identifier","src":"2169:16:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":124,"type":"bytes32","value":"candidate"},"id":132,"name":"Identifier","src":"2186:9:1"}],"id":133,"name":"FunctionCall","src":"2169:27:1"}],"id":134,"name":"VariableDeclarationStatement","src":"2156:40:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":395,"type":"function (bool) pure","value":"require"},"id":135,"name":"Identifier","src":"2202:7:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"!=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":130,"type":"uint256","value":"index"},"id":136,"name":"Identifier","src":"2210:5:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_rational_-1_by_1","typeString":"int_const -1"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(uint256)","value":"uint"},"id":137,"name":"ElementaryTypeNameExpression","src":"2219:4:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"operator":"-","prefix":true,"type":"int_const -1"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"31","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 1","value":"1"},"id":138,"name":"Literal","src":"2225:1:1"}],"id":139,"name":"UnaryOperation","src":"2224:2:1"}],"id":140,"name":"FunctionCall","src":"2219:8:1"}],"id":141,"name":"BinaryOperation","src":"2210:17:1"}],"id":142,"name":"FunctionCall","src":"2202:26:1"}],"id":143,"name":"ExpressionStatement","src":"2202:26:1"},{"attributes":{"falseBody":null},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"==","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"length","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"tokensUsedPerCandidate","referencedDeclaration":65,"type":"uint256[] storage ref"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":144,"name":"Identifier","src":"2342:9:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":145,"name":"Identifier","src":"2352:3:1"}],"id":146,"name":"MemberAccess","src":"2352:10:1"}],"id":147,"name":"IndexAccess","src":"2342:21:1"}],"id":148,"name":"MemberAccess","src":"2342:44:1"}],"id":149,"name":"MemberAccess","src":"2342:51:1"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":150,"name":"Literal","src":"2397:1:1"}],"id":151,"name":"BinaryOperation","src":"2342:56:1"},{"children":[{"children":[{"attributes":{"assignments":[153]},"children":[{"attributes":{"constant":false,"name":"i","scope":215,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":152,"name":"ElementaryTypeName","src":"2412:4:1"}],"id":153,"name":"VariableDeclaration","src":"2412:6:1"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":154,"name":"Literal","src":"2421:1:1"}],"id":155,"name":"VariableDeclarationStatement","src":"2412:10:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"<","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":153,"type":"uint256","value":"i"},"id":156,"name":"Identifier","src":"2424:1:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"length","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":77,"type":"bytes32[] storage ref","value":"candidateList"},"id":157,"name":"Identifier","src":"2428:13:1"}],"id":158,"name":"MemberAccess","src":"2428:20:1"}],"id":159,"name":"BinaryOperation","src":"2424:24:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"++","prefix":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":153,"type":"uint256","value":"i"},"id":160,"name":"Identifier","src":"2450:1:1"}],"id":161,"name":"UnaryOperation","src":"2450:3:1"}],"id":162,"name":"ExpressionStatement","src":"2450:3:1"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"}],"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"push","referencedDeclaration":null,"type":"function (uint256) returns (uint256)"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"tokensUsedPerCandidate","referencedDeclaration":65,"type":"uint256[] storage ref"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":163,"name":"Identifier","src":"2465:9:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":164,"name":"Identifier","src":"2475:3:1"}],"id":165,"name":"MemberAccess","src":"2475:10:1"}],"id":166,"name":"IndexAccess","src":"2465:21:1"}],"id":167,"name":"MemberAccess","src":"2465:44:1"}],"id":168,"name":"MemberAccess","src":"2465:49:1"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":169,"name":"Literal","src":"2515:1:1"}],"id":170,"name":"FunctionCall","src":"2465:52:1"}],"id":171,"name":"ExpressionStatement","src":"2465:52:1"}],"id":172,"name":"Block","src":"2455:71:1"}],"id":173,"name":"ForStatement","src":"2408:118:1"}],"id":174,"name":"Block","src":"2400:132:1"}],"id":175,"name":"IfStatement","src":"2338:194:1"},{"attributes":{"assignments":[177]},"children":[{"attributes":{"constant":false,"name":"availableTokens","scope":215,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":176,"name":"ElementaryTypeName","src":"2601:4:1"}],"id":177,"name":"VariableDeclaration","src":"2601:20:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"tokensBought","referencedDeclaration":62,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":178,"name":"Identifier","src":"2624:9:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":179,"name":"Identifier","src":"2634:3:1"}],"id":180,"name":"MemberAccess","src":"2634:10:1"}],"id":181,"name":"IndexAccess","src":"2624:21:1"}],"id":182,"name":"MemberAccess","src":"2624:34:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_array$_t_uint256_$dyn_storage","typeString":"uint256[] storage ref"}],"overloadedDeclarations":[null],"referencedDeclaration":249,"type":"function (uint256[] memory) pure returns (uint256)","value":"totalTokensUsed"},"id":183,"name":"Identifier","src":"2661:15:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"tokensUsedPerCandidate","referencedDeclaration":65,"type":"uint256[] storage ref"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":184,"name":"Identifier","src":"2677:9:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":185,"name":"Identifier","src":"2687:3:1"}],"id":186,"name":"MemberAccess","src":"2687:10:1"}],"id":187,"name":"IndexAccess","src":"2677:21:1"}],"id":188,"name":"MemberAccess","src":"2677:44:1"}],"id":189,"name":"FunctionCall","src":"2661:61:1"}],"id":190,"name":"BinaryOperation","src":"2624:98:1"}],"id":191,"name":"VariableDeclarationStatement","src":"2601:121:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":395,"type":"function (bool) pure","value":"require"},"id":192,"name":"Identifier","src":"2728:7:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":177,"type":"uint256","value":"availableTokens"},"id":193,"name":"Identifier","src":"2736:15:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":126,"type":"uint256","value":"votesInTokens"},"id":194,"name":"Identifier","src":"2755:13:1"}],"id":195,"name":"BinaryOperation","src":"2736:32:1"}],"id":196,"name":"FunctionCall","src":"2728:41:1"}],"id":197,"name":"ExpressionStatement","src":"2728:41:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":74,"type":"mapping(bytes32 => uint256)","value":"votesReceived"},"id":198,"name":"Identifier","src":"2776:13:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":124,"type":"bytes32","value":"candidate"},"id":199,"name":"Identifier","src":"2790:9:1"}],"id":200,"name":"IndexAccess","src":"2776:24:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":126,"type":"uint256","value":"votesInTokens"},"id":201,"name":"Identifier","src":"2804:13:1"}],"id":202,"name":"Assignment","src":"2776:41:1"}],"id":203,"name":"ExpressionStatement","src":"2776:41:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"tokensUsedPerCandidate","referencedDeclaration":65,"type":"uint256[] storage ref"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":204,"name":"Identifier","src":"2882:9:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":205,"name":"Identifier","src":"2892:3:1"}],"id":206,"name":"MemberAccess","src":"2892:10:1"}],"id":207,"name":"IndexAccess","src":"2882:21:1"}],"id":208,"name":"MemberAccess","src":"2882:44:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":130,"type":"uint256","value":"index"},"id":209,"name":"Identifier","src":"2927:5:1"}],"id":210,"name":"IndexAccess","src":"2882:51:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":126,"type":"uint256","value":"votesInTokens"},"id":211,"name":"Identifier","src":"2937:13:1"}],"id":212,"name":"Assignment","src":"2882:68:1"}],"id":213,"name":"ExpressionStatement","src":"2882:68:1"}],"id":214,"name":"Block","src":"2150:805:1"}],"id":215,"name":"FunctionDefinition","src":"2078:877:1"},{"attributes":{"constant":true,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"totalTokensUsed","payable":false,"scope":380,"stateMutability":"pure","superFunction":null,"visibility":"private"},"children":[{"children":[{"attributes":{"constant":false,"name":"_tokensUsedPerCandidate","scope":249,"stateVariable":false,"storageLocation":"default","type":"uint256[] memory","value":null,"visibility":"internal"},"children":[{"attributes":{"length":null,"type":"uint256[] storage pointer"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":216,"name":"ElementaryTypeName","src":"3042:4:1"}],"id":217,"name":"ArrayTypeName","src":"3042:6:1"}],"id":218,"name":"VariableDeclaration","src":"3042:30:1"}],"id":219,"name":"ParameterList","src":"3041:32:1"},{"children":[{"attributes":{"constant":false,"name":"","scope":249,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":220,"name":"ElementaryTypeName","src":"3096:4:1"}],"id":221,"name":"VariableDeclaration","src":"3096:4:1"}],"id":222,"name":"ParameterList","src":"3095:6:1"},{"children":[{"attributes":{"assignments":[224]},"children":[{"attributes":{"constant":false,"name":"totalUsedTokens","scope":249,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":223,"name":"ElementaryTypeName","src":"3108:4:1"}],"id":224,"name":"VariableDeclaration","src":"3108:20:1"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":225,"name":"Literal","src":"3131:1:1"}],"id":226,"name":"VariableDeclarationStatement","src":"3108:24:1"},{"children":[{"attributes":{"assignments":[228]},"children":[{"attributes":{"constant":false,"name":"i","scope":249,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":227,"name":"ElementaryTypeName","src":"3142:4:1"}],"id":228,"name":"VariableDeclaration","src":"3142:6:1"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":229,"name":"Literal","src":"3151:1:1"}],"id":230,"name":"VariableDeclarationStatement","src":"3142:10:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"<","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":228,"type":"uint256","value":"i"},"id":231,"name":"Identifier","src":"3154:1:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"length","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":218,"type":"uint256[] memory","value":"_tokensUsedPerCandidate"},"id":232,"name":"Identifier","src":"3158:23:1"}],"id":233,"name":"MemberAccess","src":"3158:30:1"}],"id":234,"name":"BinaryOperation","src":"3154:34:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"++","prefix":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":228,"type":"uint256","value":"i"},"id":235,"name":"Identifier","src":"3190:1:1"}],"id":236,"name":"UnaryOperation","src":"3190:3:1"}],"id":237,"name":"ExpressionStatement","src":"3190:3:1"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":224,"type":"uint256","value":"totalUsedTokens"},"id":238,"name":"Identifier","src":"3203:15:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":218,"type":"uint256[] memory","value":"_tokensUsedPerCandidate"},"id":239,"name":"Identifier","src":"3222:23:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":228,"type":"uint256","value":"i"},"id":240,"name":"Identifier","src":"3246:1:1"}],"id":241,"name":"IndexAccess","src":"3222:26:1"}],"id":242,"name":"Assignment","src":"3203:45:1"}],"id":243,"name":"ExpressionStatement","src":"3203:45:1"}],"id":244,"name":"Block","src":"3195:60:1"}],"id":245,"name":"ForStatement","src":"3138:117:1"},{"attributes":{"functionReturnParameters":222},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":224,"type":"uint256","value":"totalUsedTokens"},"id":246,"name":"Identifier","src":"3267:15:1"}],"id":247,"name":"Return","src":"3260:22:1"}],"id":248,"name":"Block","src":"3102:185:1"}],"id":249,"name":"FunctionDefinition","src":"3017:270:1"},{"attributes":{"constant":true,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"indexOfCandidate","payable":false,"scope":380,"stateMutability":"view","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"candidate","scope":284,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":250,"name":"ElementaryTypeName","src":"3317:7:1"}],"id":251,"name":"VariableDeclaration","src":"3317:17:1"}],"id":252,"name":"ParameterList","src":"3316:19:1"},{"children":[{"attributes":{"constant":false,"name":"","scope":284,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":253,"name":"ElementaryTypeName","src":"3357:4:1"}],"id":254,"name":"VariableDeclaration","src":"3357:4:1"}],"id":255,"name":"ParameterList","src":"3356:6:1"},{"children":[{"children":[{"attributes":{"assignments":[257]},"children":[{"attributes":{"constant":false,"name":"i","scope":284,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":256,"name":"ElementaryTypeName","src":"3373:4:1"}],"id":257,"name":"VariableDeclaration","src":"3373:6:1"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":258,"name":"Literal","src":"3382:1:1"}],"id":259,"name":"VariableDeclarationStatement","src":"3373:10:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"<","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":257,"type":"uint256","value":"i"},"id":260,"name":"Identifier","src":"3385:1:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"length","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":77,"type":"bytes32[] storage ref","value":"candidateList"},"id":261,"name":"Identifier","src":"3389:13:1"}],"id":262,"name":"MemberAccess","src":"3389:20:1"}],"id":263,"name":"BinaryOperation","src":"3385:24:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"++","prefix":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":257,"type":"uint256","value":"i"},"id":264,"name":"Identifier","src":"3411:1:1"}],"id":265,"name":"UnaryOperation","src":"3411:3:1"}],"id":266,"name":"ExpressionStatement","src":"3411:3:1"},{"children":[{"attributes":{"falseBody":null},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_bytes32","typeString":"bytes32"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"==","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"bytes32"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":77,"type":"bytes32[] storage ref","value":"candidateList"},"id":267,"name":"Identifier","src":"3428:13:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":257,"type":"uint256","value":"i"},"id":268,"name":"Identifier","src":"3442:1:1"}],"id":269,"name":"IndexAccess","src":"3428:16:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":251,"type":"bytes32","value":"candidate"},"id":270,"name":"Identifier","src":"3448:9:1"}],"id":271,"name":"BinaryOperation","src":"3428:29:1"},{"children":[{"attributes":{"functionReturnParameters":255},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":257,"type":"uint256","value":"i"},"id":272,"name":"Identifier","src":"3476:1:1"}],"id":273,"name":"Return","src":"3469:8:1"}],"id":274,"name":"Block","src":"3459:27:1"}],"id":275,"name":"IfStatement","src":"3424:62:1"}],"id":276,"name":"Block","src":"3416:76:1"}],"id":277,"name":"ForStatement","src":"3369:123:1"},{"attributes":{"functionReturnParameters":255},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_rational_-1_by_1","typeString":"int_const -1"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(uint256)","value":"uint"},"id":278,"name":"ElementaryTypeNameExpression","src":"3504:4:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"operator":"-","prefix":true,"type":"int_const -1"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"31","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 1","value":"1"},"id":279,"name":"Literal","src":"3510:1:1"}],"id":280,"name":"UnaryOperation","src":"3509:2:1"}],"id":281,"name":"FunctionCall","src":"3504:8:1"}],"id":282,"name":"Return","src":"3497:15:1"}],"id":283,"name":"Block","src":"3363:154:1"}],"id":284,"name":"FunctionDefinition","src":"3291:226:1"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"buy","payable":true,"scope":380,"stateMutability":"payable","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":285,"name":"ParameterList","src":"3803:2:1"},{"children":[{"attributes":{"constant":false,"name":"","scope":326,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":286,"name":"ElementaryTypeName","src":"3830:4:1"}],"id":287,"name":"VariableDeclaration","src":"3830:4:1"}],"id":288,"name":"ParameterList","src":"3829:6:1"},{"children":[{"attributes":{"assignments":[290]},"children":[{"attributes":{"constant":false,"name":"tokensToBuy","scope":326,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":289,"name":"ElementaryTypeName","src":"3842:4:1"}],"id":290,"name":"VariableDeclaration","src":"3842:16:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"/","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"value","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":291,"name":"Identifier","src":"3861:3:1"}],"id":292,"name":"MemberAccess","src":"3861:9:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":83,"type":"uint256","value":"tokenPrice"},"id":293,"name":"Identifier","src":"3873:10:1"}],"id":294,"name":"BinaryOperation","src":"3861:22:1"}],"id":295,"name":"VariableDeclarationStatement","src":"3842:41:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":395,"type":"function (bool) pure","value":"require"},"id":296,"name":"Identifier","src":"3889:7:1"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"<=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":290,"type":"uint256","value":"tokensToBuy"},"id":297,"name":"Identifier","src":"3897:11:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":81,"type":"uint256","value":"balanceTokens"},"id":298,"name":"Identifier","src":"3912:13:1"}],"id":299,"name":"BinaryOperation","src":"3897:28:1"}],"id":300,"name":"FunctionCall","src":"3889:37:1"}],"id":301,"name":"ExpressionStatement","src":"3889:37:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"address"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"member_name":"voterAddress","referencedDeclaration":60,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":302,"name":"Identifier","src":"3932:9:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":303,"name":"Identifier","src":"3942:3:1"}],"id":304,"name":"MemberAccess","src":"3942:10:1"}],"id":305,"name":"IndexAccess","src":"3932:21:1"}],"id":306,"name":"MemberAccess","src":"3932:34:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":307,"name":"Identifier","src":"3969:3:1"}],"id":308,"name":"MemberAccess","src":"3969:10:1"}],"id":309,"name":"Assignment","src":"3932:47:1"}],"id":310,"name":"ExpressionStatement","src":"3932:47:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"member_name":"tokensBought","referencedDeclaration":62,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":311,"name":"Identifier","src":"3985:9:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":392,"type":"msg","value":"msg"},"id":312,"name":"Identifier","src":"3995:3:1"}],"id":313,"name":"MemberAccess","src":"3995:10:1"}],"id":314,"name":"IndexAccess","src":"3985:21:1"}],"id":315,"name":"MemberAccess","src":"3985:34:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":290,"type":"uint256","value":"tokensToBuy"},"id":316,"name":"Identifier","src":"4023:11:1"}],"id":317,"name":"Assignment","src":"3985:49:1"}],"id":318,"name":"ExpressionStatement","src":"3985:49:1"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":81,"type":"uint256","value":"balanceTokens"},"id":319,"name":"Identifier","src":"4040:13:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":290,"type":"uint256","value":"tokensToBuy"},"id":320,"name":"Identifier","src":"4057:11:1"}],"id":321,"name":"Assignment","src":"4040:28:1"}],"id":322,"name":"ExpressionStatement","src":"4040:28:1"},{"attributes":{"functionReturnParameters":288},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":290,"type":"uint256","value":"tokensToBuy"},"id":323,"name":"Identifier","src":"4081:11:1"}],"id":324,"name":"Return","src":"4074:18:1"}],"id":325,"name":"Block","src":"3836:261:1"}],"id":326,"name":"FunctionDefinition","src":"3791:306:1"},{"attributes":{"constant":true,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"tokensSold","payable":false,"scope":380,"stateMutability":"view","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":327,"name":"ParameterList","src":"4120:2:1"},{"children":[{"attributes":{"constant":false,"name":"","scope":336,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":328,"name":"ElementaryTypeName","src":"4144:4:1"}],"id":329,"name":"VariableDeclaration","src":"4144:4:1"}],"id":330,"name":"ParameterList","src":"4143:6:1"},{"children":[{"attributes":{"functionReturnParameters":330},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":79,"type":"uint256","value":"totalTokens"},"id":331,"name":"Identifier","src":"4163:11:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":81,"type":"uint256","value":"balanceTokens"},"id":332,"name":"Identifier","src":"4177:13:1"}],"id":333,"name":"BinaryOperation","src":"4163:27:1"}],"id":334,"name":"Return","src":"4156:34:1"}],"id":335,"name":"Block","src":"4150:45:1"}],"id":336,"name":"FunctionDefinition","src":"4101:94:1"},{"attributes":{"constant":true,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"voterDetails","payable":false,"scope":380,"stateMutability":"view","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"user","scope":357,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":337,"name":"ElementaryTypeName","src":"4221:7:1"}],"id":338,"name":"VariableDeclaration","src":"4221:12:1"}],"id":339,"name":"ParameterList","src":"4220:14:1"},{"children":[{"attributes":{"constant":false,"name":"","scope":357,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":340,"name":"ElementaryTypeName","src":"4256:4:1"}],"id":341,"name":"VariableDeclaration","src":"4256:4:1"},{"attributes":{"constant":false,"name":"","scope":357,"stateVariable":false,"storageLocation":"default","type":"uint256[] memory","value":null,"visibility":"internal"},"children":[{"attributes":{"length":null,"type":"uint256[] storage pointer"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":342,"name":"ElementaryTypeName","src":"4262:4:1"}],"id":343,"name":"ArrayTypeName","src":"4262:6:1"}],"id":344,"name":"VariableDeclaration","src":"4262:6:1"}],"id":345,"name":"ParameterList","src":"4255:14:1"},{"children":[{"attributes":{"functionReturnParameters":345},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isInlineArray":false,"isLValue":false,"isPure":false,"lValueRequested":false,"type":"tuple(uint256,uint256[] storage ref)"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"tokensBought","referencedDeclaration":62,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":346,"name":"Identifier","src":"4284:9:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":338,"type":"address","value":"user"},"id":347,"name":"Identifier","src":"4294:4:1"}],"id":348,"name":"IndexAccess","src":"4284:15:1"}],"id":349,"name":"MemberAccess","src":"4284:28:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"tokensUsedPerCandidate","referencedDeclaration":65,"type":"uint256[] storage ref"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"struct Voting.voter storage ref"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":70,"type":"mapping(address => struct Voting.voter storage ref)","value":"voterInfo"},"id":350,"name":"Identifier","src":"4314:9:1"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":338,"type":"address","value":"user"},"id":351,"name":"Identifier","src":"4324:4:1"}],"id":352,"name":"IndexAccess","src":"4314:15:1"}],"id":353,"name":"MemberAccess","src":"4314:38:1"}],"id":354,"name":"TupleExpression","src":"4283:70:1"}],"id":355,"name":"Return","src":"4276:77:1"}],"id":356,"name":"Block","src":"4270:88:1"}],"id":357,"name":"FunctionDefinition","src":"4199:159:1"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"transferTo","payable":false,"scope":380,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"account","scope":370,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":358,"name":"ElementaryTypeName","src":"4786:7:1"}],"id":359,"name":"VariableDeclaration","src":"4786:15:1"}],"id":360,"name":"ParameterList","src":"4785:17:1"},{"attributes":{"parameters":[null]},"children":[],"id":361,"name":"ParameterList","src":"4810:0:1"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"}],"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"transfer","referencedDeclaration":null,"type":"function (uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":359,"type":"address","value":"account"},"id":362,"name":"Identifier","src":"4816:7:1"}],"id":364,"name":"MemberAccess","src":"4816:16:1"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"balance","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":405,"type":"contract Voting","value":"this"},"id":365,"name":"Identifier","src":"4833:4:1"}],"id":366,"name":"MemberAccess","src":"4833:12:1"}],"id":367,"name":"FunctionCall","src":"4816:30:1"}],"id":368,"name":"ExpressionStatement","src":"4816:30:1"}],"id":369,"name":"Block","src":"4810:41:1"}],"id":370,"name":"FunctionDefinition","src":"4766:85:1"},{"attributes":{"constant":true,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"allCandidates","payable":false,"scope":380,"stateMutability":"view","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":371,"name":"ParameterList","src":"4877:2:1"},{"children":[{"attributes":{"constant":false,"name":"","scope":379,"stateVariable":false,"storageLocation":"default","type":"bytes32[] memory","value":null,"visibility":"internal"},"children":[{"attributes":{"length":null,"type":"bytes32[] storage pointer"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":372,"name":"ElementaryTypeName","src":"4901:7:1"}],"id":373,"name":"ArrayTypeName","src":"4901:9:1"}],"id":374,"name":"VariableDeclaration","src":"4901:9:1"}],"id":375,"name":"ParameterList","src":"4900:11:1"},{"children":[{"attributes":{"functionReturnParameters":375},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":77,"type":"bytes32[] storage ref","value":"candidateList"},"id":376,"name":"Identifier","src":"4925:13:1"}],"id":377,"name":"Return","src":"4918:20:1"}],"id":378,"name":"Block","src":"4912:31:1"}],"id":379,"name":"FunctionDefinition","src":"4855:88:1"}],"id":380,"name":"ContractDefinition","src":"95:4851:1"}],"id":381,"name":"SourceUnit","src":"0:4947:1"},"compiler":{"name":"solc","version":"0.4.18+commit.9cf6e910.Emscripten.clang"},"networks":{"4":{"events":{},"links":{},"address":"0x6852059817e7c2a27f590100e1cd90edce7f9123"}},"schemaVersion":"1.0.1","updatedAt":"2017-12-21T08:52:09.987Z"}
+
+/***/ }),
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(79);
+var content = __webpack_require__(80);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(90)(content, {});
+var update = __webpack_require__(91)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21997,11 +22003,11 @@ if(false) {
 }
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Schema = __webpack_require__(92);
-var Contract = __webpack_require__(96);
+var Schema = __webpack_require__(93);
+var Contract = __webpack_require__(97);
 
 var contract = function(options) {
   options = Schema.normalizeOptions(options);
@@ -22067,18 +22073,19 @@ if (typeof window !== "undefined") {
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_css__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_css__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__app_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_web3__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_web3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_web3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_truffle_contract__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_truffle_contract__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_truffle_contract___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_truffle_contract__);
-throw new Error("Cannot find module \"../../build/contracts/Voting.json\"");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__build_contracts_Voting_json__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__build_contracts_Voting_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__build_contracts_Voting_json__);
 // Import the page's CSS. Webpack will know what to do with it.
 
 
@@ -22150,10 +22157,10 @@ window.lookupVoterInfo = function() {
   let address = $("#voter-info").val();
   Voting.deployed().then(function(contractInstance) {
     contractInstance.voterDetails.call(address).then(function(v) {
-      $("#tokens-bought").html("Total Tokens bought: " + v[0].toString());
+      $("#tokens-bought").html("Total sensorcoins bought: " + v[0].toString());
       let votesPerCandidate = v[1];
       $("#votes-cast").empty();
-      $("#votes-cast").append("Votes cast per candidate: <br>");
+      $("#votes-cast").append("Spending per sensor: <br>");
       let allCandidates = Object.keys(candidates);
       for(let i=0; i < allCandidates.length; i++) {
         $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "<br>");
@@ -22239,7 +22246,7 @@ $( document ).ready(function() {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22360,7 +22367,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -22597,7 +22604,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -22751,7 +22758,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -22822,7 +22829,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -22903,7 +22910,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -22986,7 +22993,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23107,7 +23114,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23170,7 +23177,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23215,7 +23222,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23274,7 +23281,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23328,7 +23335,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23377,7 +23384,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23422,7 +23429,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23457,7 +23464,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23507,7 +23514,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23657,7 +23664,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -23852,7 +23859,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -24049,7 +24056,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -24193,7 +24200,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -24465,7 +24472,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -24550,7 +24557,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -24638,7 +24645,7 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -25413,21 +25420,21 @@ function fromByteArray (uint8) {
 }));
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(80)();
+exports = module.exports = __webpack_require__(81)();
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  padding-top: 30px;\n  max-width: 800px;\n  margin: 0 auto;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\ninput {\n  padding: 5px;\n  font-size: 16px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  text-align: center;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n", ""]);
+exports.push([module.i, "body {\n  padding-top: 50px;\n  max-width: 1000px;\n  margin: 0 auto;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  text-align: center;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports) {
 
 /*
@@ -25483,7 +25490,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25491,7 +25498,7 @@ module.exports = function() {
 
 /* eslint-disable */
 
-var utils = __webpack_require__(82);
+var utils = __webpack_require__(83);
 var uint256Coder = utils.uint256Coder;
 var coderBoolean = utils.coderBoolean;
 var coderFixedBytes = utils.coderFixedBytes;
@@ -25623,15 +25630,15 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33).Buffer))
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(Buffer) {
 
 var BN = __webpack_require__(41);
-var numberToBN = __webpack_require__(87);
-var keccak256 = __webpack_require__(86).keccak_256;
+var numberToBN = __webpack_require__(88);
+var keccak256 = __webpack_require__(87).keccak_256;
 
 // from ethereumjs-util
 function stripZeros(aInput) {
@@ -26047,7 +26054,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33).Buffer))
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -26137,7 +26144,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports) {
 
 /**
@@ -26156,7 +26163,7 @@ module.exports = function isHexPrefixed(str) {
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -26167,7 +26174,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/**
@@ -26642,14 +26649,14 @@ module.exports = Array.isArray || function (arr) {
   }
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(88), __webpack_require__(32)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(89), __webpack_require__(32)))
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var BN = __webpack_require__(41);
-var stripHexPrefix = __webpack_require__(89);
+var stripHexPrefix = __webpack_require__(90);
 
 /**
  * Returns a BN object, converts a number value to a BN
@@ -26689,7 +26696,7 @@ module.exports = function numberToBN(arg) {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -26879,10 +26886,10 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isHexPrefixed = __webpack_require__(84);
+var isHexPrefixed = __webpack_require__(85);
 
 /**
  * Removes '0x' from a given `String` is present
@@ -26899,7 +26906,7 @@ module.exports = function stripHexPrefix(str) {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports) {
 
 /*
@@ -27151,7 +27158,7 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // TODO: remove web3 requirement
@@ -27218,11 +27225,11 @@ module.exports = Blockchain;
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var sha3 = __webpack_require__(93);
-var schema_version = __webpack_require__(95).version;
+var sha3 = __webpack_require__(94);
+var schema_version = __webpack_require__(96).version;
 
 var TruffleSchema = {
   // Normalize options passed in to be the exact options required
@@ -27405,13 +27412,13 @@ module.exports = TruffleSchema;
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(45), __webpack_require__(94));
+		module.exports = exports = factory(__webpack_require__(45), __webpack_require__(95));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -27733,7 +27740,7 @@ module.exports = TruffleSchema;
 }));
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -28042,18 +28049,18 @@ module.exports = TruffleSchema;
 }));
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports) {
 
 module.exports = {"_from":"truffle-contract-schema@0.0.5","_id":"truffle-contract-schema@0.0.5","_inBundle":false,"_integrity":"sha1-Xp0gvQvyon/pQxB0gknUhO7kmWE=","_location":"/truffle-contract-schema","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"truffle-contract-schema@0.0.5","name":"truffle-contract-schema","escapedName":"truffle-contract-schema","rawSpec":"0.0.5","saveSpec":null,"fetchSpec":"0.0.5"},"_requiredBy":["/truffle-contract"],"_resolved":"https://registry.npmjs.org/truffle-contract-schema/-/truffle-contract-schema-0.0.5.tgz","_shasum":"5e9d20bd0bf2a27fe94310748249d484eee49961","_spec":"truffle-contract-schema@0.0.5","_where":"/Users/nikolai/Desktop/stuff/Produce/project_hackathons/Hackathon16 Blockchain/part3/node_modules/truffle-contract","author":{"name":"Tim Coulter","email":"tim.coulter@consensys.net"},"bugs":{"url":"https://github.com/trufflesuite/truffle-schema/issues"},"bundleDependencies":false,"dependencies":{"crypto-js":"^3.1.9-1"},"deprecated":false,"description":"JSON schema for contract artifacts","devDependencies":{"mocha":"^3.2.0"},"homepage":"https://github.com/trufflesuite/truffle-schema#readme","keywords":["ethereum","json","schema","contract","artifacts"],"license":"MIT","main":"index.js","name":"truffle-contract-schema","repository":{"type":"git","url":"git+https://github.com/trufflesuite/truffle-schema.git"},"scripts":{"test":"mocha"},"version":"0.0.5"}
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, module) {var ethJSABI = __webpack_require__(81);
-var BlockchainUtils = __webpack_require__(91);
-var Web3 = __webpack_require__(97);
+/* WEBPACK VAR INJECTION */(function(global, module) {var ethJSABI = __webpack_require__(82);
+var BlockchainUtils = __webpack_require__(92);
+var Web3 = __webpack_require__(98);
 
 // For browserified version. If browserify gave us an empty version,
 // look for the one provided by the user.
@@ -28850,10 +28857,10 @@ var contract = (function(module) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32), __webpack_require__(39)(module)))
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Web3 = __webpack_require__(112);
+var Web3 = __webpack_require__(113);
 
 // dont override global variable
 if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
@@ -28864,25 +28871,25 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -28919,7 +28926,7 @@ module.exports = SolidityTypeAddress;
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -28955,7 +28962,7 @@ module.exports = SolidityTypeBool;
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -28999,7 +29006,7 @@ module.exports = SolidityTypeBytes;
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -29030,7 +29037,7 @@ module.exports = SolidityTypeDynamicBytes;
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -29072,7 +29079,7 @@ module.exports = SolidityTypeInt;
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -29114,7 +29121,7 @@ module.exports = SolidityTypeReal;
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -29145,7 +29152,7 @@ module.exports = SolidityTypeString;
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -29187,7 +29194,7 @@ module.exports = SolidityTypeUInt;
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -29229,7 +29236,7 @@ module.exports = SolidityTypeUReal;
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29245,13 +29252,13 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"0.16.0"}
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -29281,22 +29288,22 @@ module.exports = {"version":"0.16.0"}
  * @date 2014
  */
 
-var RequestManager = __webpack_require__(126);
+var RequestManager = __webpack_require__(127);
 var Iban = __webpack_require__(26);
-var Eth = __webpack_require__(121);
-var DB = __webpack_require__(120);
-var Shh = __webpack_require__(124);
-var Net = __webpack_require__(122);
-var Personal = __webpack_require__(123);
-var Settings = __webpack_require__(127);
-var version = __webpack_require__(111);
+var Eth = __webpack_require__(122);
+var DB = __webpack_require__(121);
+var Shh = __webpack_require__(125);
+var Net = __webpack_require__(123);
+var Personal = __webpack_require__(124);
+var Settings = __webpack_require__(128);
+var version = __webpack_require__(112);
 var utils = __webpack_require__(2);
 var sha3 = __webpack_require__(17);
-var extend = __webpack_require__(116);
-var Batch = __webpack_require__(114);
+var extend = __webpack_require__(117);
+var Batch = __webpack_require__(115);
 var Property = __webpack_require__(19);
-var HttpProvider = __webpack_require__(118);
-var IpcProvider = __webpack_require__(119);
+var HttpProvider = __webpack_require__(119);
+var IpcProvider = __webpack_require__(120);
 
 
 
@@ -29403,7 +29410,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -29497,7 +29504,7 @@ module.exports = AllSolidityEvents;
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -29569,7 +29576,7 @@ module.exports = Batch;
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -29597,8 +29604,8 @@ module.exports = Batch;
 var utils = __webpack_require__(2);
 var coder = __webpack_require__(37);
 var SolidityEvent = __webpack_require__(47);
-var SolidityFunction = __webpack_require__(117);
-var AllEvents = __webpack_require__(113);
+var SolidityFunction = __webpack_require__(118);
+var AllEvents = __webpack_require__(114);
 
 /**
  * Should be called to encode constructor params
@@ -29873,7 +29880,7 @@ module.exports = ContractFactory;
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var formatters = __webpack_require__(7);
@@ -29927,7 +29934,7 @@ module.exports = extend;
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -30180,7 +30187,7 @@ module.exports = SolidityFunction;
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30225,7 +30232,7 @@ if (typeof Meteor !== 'undefined' && Meteor.isServer) { // jshint ignore: line
 
 // node
 } else {
-    XMLHttpRequest = __webpack_require__(110).XMLHttpRequest; // jshint ignore: line
+    XMLHttpRequest = __webpack_require__(111).XMLHttpRequest; // jshint ignore: line
 }
 
 /**
@@ -30333,7 +30340,7 @@ module.exports = HttpProvider;
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30547,7 +30554,7 @@ module.exports = IpcProvider;
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -30619,7 +30626,7 @@ module.exports = DB;
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30653,13 +30660,13 @@ var utils = __webpack_require__(2);
 var Method = __webpack_require__(14);
 var Property = __webpack_require__(19);
 var c = __webpack_require__(24);
-var Contract = __webpack_require__(115);
+var Contract = __webpack_require__(116);
 var watches = __webpack_require__(27);
 var Filter = __webpack_require__(25);
-var IsSyncing = __webpack_require__(128);
-var namereg = __webpack_require__(125);
+var IsSyncing = __webpack_require__(129);
+var namereg = __webpack_require__(126);
 var Iban = __webpack_require__(26);
-var transfer = __webpack_require__(129);
+var transfer = __webpack_require__(130);
 
 var blockCall = function (args) {
     return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
@@ -30969,7 +30976,7 @@ module.exports = Eth;
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -31027,7 +31034,7 @@ module.exports = Net;
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31119,7 +31126,7 @@ module.exports = Personal;
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -31211,7 +31218,7 @@ module.exports = Shh;
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -31236,8 +31243,8 @@ module.exports = Shh;
  * @date 2015
  */
 
-var globalRegistrarAbi = __webpack_require__(98);
-var icapRegistrarAbi= __webpack_require__(99);
+var globalRegistrarAbi = __webpack_require__(99);
+var icapRegistrarAbi= __webpack_require__(100);
 
 var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
 var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
@@ -31256,7 +31263,7 @@ module.exports = {
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -31527,7 +31534,7 @@ module.exports = RequestManager;
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports) {
 
 
@@ -31542,7 +31549,7 @@ module.exports = Settings;
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -31641,7 +31648,7 @@ module.exports = IsSyncing;
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -31667,7 +31674,7 @@ module.exports = IsSyncing;
  */
 
 var Iban = __webpack_require__(26);
-var exchangeAbi = __webpack_require__(100);
+var exchangeAbi = __webpack_require__(101);
 
 /**
  * Should be used to make Iban transfer
@@ -31739,25 +31746,25 @@ module.exports = transfer;
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -31789,7 +31796,7 @@ module.exports = SolidityTypeAddress;
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -31821,7 +31828,7 @@ module.exports = SolidityTypeBool;
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -31856,7 +31863,7 @@ module.exports = SolidityTypeBytes;
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -31882,7 +31889,7 @@ module.exports = SolidityTypeDynamicBytes;
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -31920,7 +31927,7 @@ module.exports = SolidityTypeInt;
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -31958,7 +31965,7 @@ module.exports = SolidityTypeReal;
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -31984,7 +31991,7 @@ module.exports = SolidityTypeString;
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -32022,7 +32029,7 @@ module.exports = SolidityTypeUInt;
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(5);
@@ -32060,7 +32067,7 @@ module.exports = SolidityTypeUReal;
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32076,13 +32083,13 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"0.18.4"}
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -32112,23 +32119,23 @@ module.exports = {"version":"0.18.4"}
  * @date 2014
  */
 
-var RequestManager = __webpack_require__(159);
+var RequestManager = __webpack_require__(160);
 var Iban = __webpack_require__(30);
-var Eth = __webpack_require__(153);
-var DB = __webpack_require__(152);
-var Shh = __webpack_require__(156);
-var Net = __webpack_require__(154);
-var Personal = __webpack_require__(155);
-var Swarm = __webpack_require__(157);
-var Settings = __webpack_require__(160);
-var version = __webpack_require__(143);
+var Eth = __webpack_require__(154);
+var DB = __webpack_require__(153);
+var Shh = __webpack_require__(157);
+var Net = __webpack_require__(155);
+var Personal = __webpack_require__(156);
+var Swarm = __webpack_require__(158);
+var Settings = __webpack_require__(161);
+var version = __webpack_require__(144);
 var utils = __webpack_require__(3);
 var sha3 = __webpack_require__(20);
-var extend = __webpack_require__(148);
-var Batch = __webpack_require__(146);
+var extend = __webpack_require__(149);
+var Batch = __webpack_require__(147);
 var Property = __webpack_require__(15);
-var HttpProvider = __webpack_require__(150);
-var IpcProvider = __webpack_require__(151);
+var HttpProvider = __webpack_require__(151);
+var IpcProvider = __webpack_require__(152);
 var BigNumber = __webpack_require__(16);
 
 
@@ -32238,7 +32245,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -32332,7 +32339,7 @@ module.exports = AllSolidityEvents;
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -32404,7 +32411,7 @@ module.exports = Batch;
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -32432,8 +32439,8 @@ module.exports = Batch;
 var utils = __webpack_require__(3);
 var coder = __webpack_require__(38);
 var SolidityEvent = __webpack_require__(51);
-var SolidityFunction = __webpack_require__(149);
-var AllEvents = __webpack_require__(145);
+var SolidityFunction = __webpack_require__(150);
+var AllEvents = __webpack_require__(146);
 
 /**
  * Should be called to encode constructor params
@@ -32720,7 +32727,7 @@ module.exports = ContractFactory;
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var formatters = __webpack_require__(9);
@@ -32774,7 +32781,7 @@ module.exports = extend;
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -33042,7 +33049,7 @@ module.exports = SolidityFunction;
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -33079,10 +33086,10 @@ if (typeof window !== 'undefined' && window.XMLHttpRequest) {
     XMLHttpRequest = window.XMLHttpRequest; // jshint ignore: line
 // node
 } else {
-    XMLHttpRequest = __webpack_require__(142).XMLHttpRequest; // jshint ignore: line
+    XMLHttpRequest = __webpack_require__(143).XMLHttpRequest; // jshint ignore: line
 }
 
-var XHR2 = __webpack_require__(163); // jshint ignore: line
+var XHR2 = __webpack_require__(164); // jshint ignore: line
 
 /**
  * HttpProvider should be used to send rpc calls over http
@@ -33201,7 +33208,7 @@ module.exports = HttpProvider;
 
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33415,7 +33422,7 @@ module.exports = IpcProvider;
 
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -33487,7 +33494,7 @@ module.exports = DB;
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33521,13 +33528,13 @@ var utils = __webpack_require__(3);
 var Method = __webpack_require__(10);
 var Property = __webpack_require__(15);
 var c = __webpack_require__(28);
-var Contract = __webpack_require__(147);
+var Contract = __webpack_require__(148);
 var watches = __webpack_require__(31);
 var Filter = __webpack_require__(29);
-var IsSyncing = __webpack_require__(161);
-var namereg = __webpack_require__(158);
+var IsSyncing = __webpack_require__(162);
+var namereg = __webpack_require__(159);
 var Iban = __webpack_require__(30);
-var transfer = __webpack_require__(162);
+var transfer = __webpack_require__(163);
 
 var blockCall = function (args) {
     return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
@@ -33848,7 +33855,7 @@ module.exports = Eth;
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -33906,7 +33913,7 @@ module.exports = Net;
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34006,7 +34013,7 @@ module.exports = Personal;
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -34098,7 +34105,7 @@ module.exports = Shh;
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34250,7 +34257,7 @@ module.exports = Swarm;
 
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -34275,8 +34282,8 @@ module.exports = Swarm;
  * @date 2015
  */
 
-var globalRegistrarAbi = __webpack_require__(130);
-var icapRegistrarAbi= __webpack_require__(131);
+var globalRegistrarAbi = __webpack_require__(131);
+var icapRegistrarAbi= __webpack_require__(132);
 
 var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
 var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
@@ -34295,7 +34302,7 @@ module.exports = {
 
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -34566,7 +34573,7 @@ module.exports = RequestManager;
 
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports) {
 
 
@@ -34581,7 +34588,7 @@ module.exports = Settings;
 
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -34680,7 +34687,7 @@ module.exports = IsSyncing;
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -34706,7 +34713,7 @@ module.exports = IsSyncing;
  */
 
 var Iban = __webpack_require__(30);
-var exchangeAbi = __webpack_require__(132);
+var exchangeAbi = __webpack_require__(133);
 
 /**
  * Should be used to make Iban transfer
@@ -34778,7 +34785,7 @@ module.exports = transfer;
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports) {
 
 module.exports = XMLHttpRequest;

@@ -69,10 +69,10 @@ window.lookupVoterInfo = function() {
   let address = $("#voter-info").val();
   Voting.deployed().then(function(contractInstance) {
     contractInstance.voterDetails.call(address).then(function(v) {
-      $("#tokens-bought").html("Total Tokens bought: " + v[0].toString());
+      $("#tokens-bought").html("Total sensorcoins bought: " + v[0].toString());
       let votesPerCandidate = v[1];
       $("#votes-cast").empty();
-      $("#votes-cast").append("Votes cast per candidate: <br>");
+      $("#votes-cast").append("Spending per sensor: <br>");
       let allCandidates = Object.keys(candidates);
       for(let i=0; i < allCandidates.length; i++) {
         $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "<br>");
