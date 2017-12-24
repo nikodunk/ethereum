@@ -65,22 +65,28 @@ window.buyTokens = function() {
   populateTokenData();
 }
 
-window.lookupVoterInfo = function() {
-  let address = $("#voter-info").val();
-  Voting.deployed().then(function(contractInstance) {
-    contractInstance.voterDetails.call(address).then(function(v) {
-      $("#tokens-bought").html("Total sensorcoins bought: " + v[0].toString());
-      let votesPerCandidate = v[1];
-      $("#votes-cast").empty();
-      $("#votes-cast").append("Spending per sensor: <br>");
-      let allCandidates = Object.keys(candidates);
-      for(let i=0; i < allCandidates.length; i++) {
-        $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "<br>");
-      }
-    });
-  });
-}
+  window.loadUserAccount = function(){
+    window.setTimeout(lookupVoterInfo,1000);
+  }
 
+// $( document ).ready(function(){
+  window.lookupVoterInfo = function() {
+    // let address = $("#voter-info").val();
+    let address = web3.eth.accounts[0]
+    Voting.deployed().then(function(contractInstance) {
+      contractInstance.voterDetails.call(address).then(function(v) {
+        $("#tokens-bought").html("Total sensorcoins bought: " + v[0].toString());
+        let votesPerCandidate = v[1];
+        $("#votes-cast").empty();
+        $("#votes-cast").append("Spending per sensor: <br>");
+        let allCandidates = Object.keys(candidates);
+        for(let i=0; i < allCandidates.length; i++) {
+          $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "<br>");
+        }
+      });
+    });
+  }
+// })
 /* Instead of hardcoding the candidates hash, we now fetch the candidate list from
  * the blockchain and populate the array. Once we fetch the candidates, we setup the
  * table in the UI with all the candidates and the votes they have received.

@@ -4,68 +4,48 @@
   <title>Sensorcoin</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <!-- <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'> -->
-  <style>
-    table, th, td{
-      border-collapse: collapse;
-      border: 1px lightgrey solid;
-      padding: 10px;
-      margin: 0 auto;
-    }
-    .btn {
-      background-color: lightblue;
-      padding: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 300px;
-      margin: 0 auto;
-    }
-    .btn:hover{
-        -webkit-transition: all 200ms ease-in;
-        -webkit-transform: scale(1.5);
-        -ms-transition: all 200ms ease-in;
-        -ms-transform: scale(1.5);   
-        -moz-transition: all 200ms ease-in;
-        -moz-transform: scale(1.5);
-        transition: all 200ms ease-in;
-        transform: scale(1.03);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        transition: box-shadow 0.2s ease-in-out;
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    window.onload = loadUserAccount;
+  </script>
 
-    }
-    a{
-      color: white;
-      text-decoration: none
-    }
-    .flexbox{
-        margin: 0 auto; 
-        display:flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        text-align: center
-      }
-    .box{
-      min-width: 280px;
-      max-width: 300px;
-      border: 1px solid lightgrey;
-      padding: 10px;
-      margin: 10px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-    input{
-      padding: 15px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px lightgrey solid;
-    }
 
-  </style>
 </head>
 <body >
   <h1>Sensor Data Marketplace</h1>
   <div class="flexbox">
 
+    <div class="box">
+      <h4>Your Account</h4>
+        <div >
+          <!-- <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the user address" /><br><br>
+          <a href="#" onclick="specialSauce()" class="btn btn-primary">Get info</a><br><br> -->
+          <div class="voter-details row text-left">
+            <div id="tokens-bought" ></div>
+            <div id="votes-cast" ></div>
+          </div>
+        </div>
+        <br><br>
+        <h4>Contract Account</h4>
+        <table >
+          <tr>
+            <td>Sensorcoins For Sale</td>
+            <td id="tokens-total"></td>
+          </tr>
+          <tr>
+            <td>Sensorcoins Sold</td>
+            <td id="tokens-sold"></td>
+          </tr>
+          <tr>
+            <td>Balance in the contract</td>
+            <td id="contract-balance"></td>
+          </tr>
+        </table>
+        
+        
+    </div>
+    
     <div class="box">
       <h4>Step 1: Get or mine sensorcoins</h4>
       <div>
@@ -99,50 +79,8 @@
     
     </div>
 
-    <div class="box">
-      <h4>Sensorcoin Stats</h4>
-        <table >
-          <tr>
-            <td>Sensorcoins For Sale</td>
-            <td id="tokens-total"></td>
-          </tr>
-          <tr>
-            <td>Sensorcoins Sold</td>
-            <td id="tokens-sold"></td>
-          </tr>
-          <tr>
-            <td>Balance in the contract</td>
-            <td id="contract-balance"></td>
-          </tr>
-        </table>
-        <br><br>
-        <h4>Lookup User Info</h4>
-        <div >
-          <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the user address" /><br><br>
-          <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Get info</a><br><br>
-          <div class="voter-details row text-left">
-            <div id="tokens-bought" ></div>
-            <div id="votes-cast" ></div>
-          </div>
-        </div>
-    </div>
-
-    
-
-    <!-- <div class="box">
-      <h2>Lookup User Info</h2>
-      <div>
-        <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the voter address" />&nbsp;
-        <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Lookup</a>
-        <div class="voter-details row text-left">
-          <div id="tokens-bought" class="margin-top-3 col-md-12"></div>
-          <div id="votes-cast" class="col-md-12"></div>
-        </div>
-      </div>
-    </div> -->
 
   </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-<script src="app.js"></script>
+
 </html>
