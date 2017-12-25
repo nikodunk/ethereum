@@ -44,3 +44,60 @@ h3 {
 .hint {
   color: #666;
 }
+
+
+
+    table, th, td{
+      border-collapse: collapse;
+      border: 1px lightgrey solid;
+      padding: 10px;
+      margin: 0 auto;
+    }
+    .btn {
+      background-color: lightblue;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .btn:hover{
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.5);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.5);   
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.5);
+        transition: all 200ms ease-in;
+        transform: scale(1.03);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: box-shadow 0.2s ease-in-out;
+
+    }
+    a{
+      color: white;
+      text-decoration: none
+    }
+    .flexbox{
+        margin: 0 auto; 
+        display:flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        text-align: center
+      }
+    .box{
+      min-width: 280px;
+      max-width: 300px;
+      border: 1px solid lightgrey;
+      padding: 10px;
+      margin: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    input{
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px lightgrey solid;
+    }
