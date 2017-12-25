@@ -22163,13 +22163,18 @@ window.buyTokens = function() {
     let address = web3.eth.accounts[0]
     Voting.deployed().then(function(contractInstance) {
       contractInstance.voterDetails.call(address).then(function(v) {
-        $("#tokens-bought").html("Total sensorcoins bought: " + v[0].toString());
+        let sensorcoins = v[0].c[0]-v[1][0].c[0]-v[1][1].c[0]-v[1][2].c[0]
+        let spent = v[1][0].c[0]+v[1][1].c[0]+v[1][2].c[0]
+        $("#tokens-bought").html("Sensorcoin wallet: " + sensorcoins + "<br>");
+        $("#tokens-bought").append("Spent: " + spent + "<br>");
+        // $("#tokens-bought").append("Total sensorcoins bought: " + v[0].toString());
         let votesPerCandidate = v[1];
         $("#votes-cast").empty();
-        $("#votes-cast").append("Spending per sensor: <br>");
+        // $("#votes-cast").append("Spent: &nbsp;");
         let allCandidates = Object.keys(candidates);
         for(let i=0; i < allCandidates.length; i++) {
-          $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "<br>");
+          $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "&nbsp;");
+
         }
       });
     });
@@ -25434,7 +25439,7 @@ exports = module.exports = __webpack_require__(81)();
 
 
 // module
-exports.push([module.i, "body {\n  padding-top: 50px;\n  max-width: 1200px;\n  margin: 0 auto;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  text-align: center;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n\n\n\n    table, th, td{\n      border-collapse: collapse;\n      border: 1px lightgrey solid;\n      padding: 10px;\n      margin: 0 auto;\n    }\n    .btn {\n      background-color: lightblue;\n      padding: 10px;\n      border-radius: 5px;\n      text-decoration: none;\n      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\n      max-width: 300px;\n      margin: 0 auto;\n    }\n    .btn:hover{\n        -webkit-transition: all 200ms ease-in;\n        -webkit-transform: scale(1.5);\n        -ms-transition: all 200ms ease-in;\n        -ms-transform: scale(1.5);   \n        -moz-transition: all 200ms ease-in;\n        -moz-transform: scale(1.5);\n        transition: all 200ms ease-in;\n        transform: scale(1.03);\n        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        transition: box-shadow 0.2s ease-in-out;\n\n    }\n    a{\n      color: white;\n      text-decoration: none\n    }\n    .flexbox{\n        margin: 0 auto; \n        display:flex; \n        flex-wrap: wrap; \n        justify-content: center; \n        text-align: center\n      }\n    .box{\n      min-width: 280px;\n      max-width: 300px;\n      border: 1px solid lightgrey;\n      padding: 10px;\n      margin: 10px;\n      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);\n      border-radius: 5px;\n    }\n    input{\n      padding: 15px;\n      font-size: 16px;\n      border-radius: 5px;\n      border: 1px lightgrey solid;\n    }\n", ""]);
+exports.push([module.i, "body {\n  padding-top: 50px;\n  max-width: 1200px;\n  margin: 0 auto;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  text-align: center;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n\n\n\n    table, th, td{\n      border-collapse: collapse;\n      border: 1px lightgrey solid;\n      padding: 10px;\n      margin: 0 auto;\n    }\n    .btn {\n      background-color: lightblue;\n      padding: 10px;\n      border-radius: 5px;\n      text-decoration: none;\n      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\n      max-width: 300px;\n      margin: 0 auto;\n    }\n    .btn:hover{\n        -webkit-transition: all 200ms ease-in;\n        -webkit-transform: scale(1.5);\n        -ms-transition: all 200ms ease-in;\n        -ms-transform: scale(1.5);   \n        -moz-transition: all 200ms ease-in;\n        -moz-transform: scale(1.5);\n        transition: all 200ms ease-in;\n        transform: scale(1.03);\n        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        transition: box-shadow 0.2s ease-in-out;\n\n    }\n    a{\n      color: white;\n      text-decoration: none\n    }\n    .flexbox{\n        margin: 0 auto; \n        display:flex; \n        flex-wrap: wrap; \n        justify-content: center; \n        text-align: center\n      }\n    .box{\n      min-width: 280px;\n      max-width: 300px;\n      border: 1px solid lightgrey;\n      padding: 10px;\n      margin: 10px;\n      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);\n      border-radius: 5px;\n    }\n    input{\n      padding: 15px;\n      font-size: 16px;\n      border-radius: 5px;\n      border: 1px lightgrey solid;\n    }\n\n    #votes-cast{\n      font-size: .7rem;\n    }\n", ""]);
 
 // exports
 

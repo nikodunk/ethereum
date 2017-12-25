@@ -75,13 +75,18 @@ window.buyTokens = function() {
     let address = web3.eth.accounts[0]
     Voting.deployed().then(function(contractInstance) {
       contractInstance.voterDetails.call(address).then(function(v) {
-        $("#tokens-bought").html("Total sensorcoins bought: " + v[0].toString());
+        let sensorcoins = v[0].c[0]-v[1][0].c[0]-v[1][1].c[0]-v[1][2].c[0]
+        let spent = v[1][0].c[0]+v[1][1].c[0]+v[1][2].c[0]
+        $("#tokens-bought").html("Sensorcoin wallet: " + sensorcoins + "<br>");
+        $("#tokens-bought").append("Spent: " + spent + "<br>");
+        // $("#tokens-bought").append("Total sensorcoins bought: " + v[0].toString());
         let votesPerCandidate = v[1];
         $("#votes-cast").empty();
-        $("#votes-cast").append("Spending per sensor: <br>");
+        // $("#votes-cast").append("Spent: &nbsp;");
         let allCandidates = Object.keys(candidates);
         for(let i=0; i < allCandidates.length; i++) {
-          $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "<br>");
+          $("#votes-cast").append(allCandidates[i] + ": " + votesPerCandidate[i] + "&nbsp;");
+
         }
       });
     });

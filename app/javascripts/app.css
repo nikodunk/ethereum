@@ -101,3 +101,7 @@ h3 {
       border-radius: 5px;
       border: 1px lightgrey solid;
     }
+
+    #votes-cast{
+      font-size: .7rem;
+    }
