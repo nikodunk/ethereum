@@ -12,4 +12,4 @@ to deploy:
 
 	npm run build
 
-hack: move index.html, app.css and app.js from the build folder to main, and push to master, link to  gh-pages.
+hack: move index.html, app.css and app.js from the build folder to main, push to master, link to gh-pages.
